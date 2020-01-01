@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- load mapbox js and css -->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+
+    <!-- <meta http-equiv="refresh" content="5" /> -->
+    <title>Eldr - Live a Better Life</title>
+
+    <link rel="icon" type="image/png" href="./assets/images/marker.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+    <!-- Moment.js Reference -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+    <script src="./assets/javascript/app.js" defer></script>
+
+</head>
+<!-- class="container-fluid bg-info" -->
+
+<body>
+    <!-- // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+  // SECTION B.2. - MAP: Search Criteria
+  // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+
+    <div class="container-fluid bg-info">
+        <div id="totalBody" class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-7">
+                <div id="whatTop" class="col-md-12 filter-title">
+                    <h5>
+                        Enter pick up location.</h5>
+                </div>
+                <br>
+
+                <form>
+                    <!-- <div id="category" class="col-md-12 form-group">
+                        category dropdown
+                        <select id="category-list" class="custom-select" aria-labelledby="dropdownMenuButton">
+                            <option disable selected>Category</option>
+                            <option value="nightlife">Nightlife</option>
+                            <option value="dining">Dining</option>
+                            <option value="fitness">Fitness</option>
+                            <option value="events">Events</option>
+                            <option value="medical">Medical</option>
+                        </select>
+                    </div> -->
+                    <div id="city-list" class="col-md-12">
+                        <div class="col-md-12 form-group">
+                            <select id="city-list" class="custom-select" aria-labelledby="dropdownMenuButton">
+                                <option disable selected>City</option>
+                                <option value="Boston">Boston</option>
+                                <option value="Brookline">Brookline</option>
+                                <option value="Cambridge">Cambridge</option>
+                                <option value="Medford">Medford</option>
+                                <option value="Milton">Milton</option>
+                                <option value="Quincy">Quincy</option>
+                                <option value="Somerville">Somerville</option>
+                                <option value="Woburn">Woburn</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="category-list" class="col-md-12">
+                        <div class="col-md-12 form-group">
+                            <select id="need-list" class="custom-select" aria-labelledby="dropdownMenuButton">
+                                <option disable selected>Special Need</option>
+                                <option value="wheelchair">wheelchair</option>
+                                <option value="Assistant">Assistant</option>
+                                <option value="Walker">Walker</option>
+                                <option value="phisical">Phisical Help</option>
+                                <option value="Mental">Mental Help</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="whatTop" class="col-md-12 filter-title">
+                        <h5>
+                            Enter drop-off location.</h5>
+                    </div>
+                    <br>
+                    <div id="needs-list" class="col-md-12">
+                        <div class="col-md-12 form-group">
+                            <select id="Hospitals-list" class="custom-select" aria-labelledby="dropdownMenuButton">
+                                <option disable selected>City</option>
+                                <option value="MGH">Mass General Hospital</option>
+                                <option value="Tufts Hospital">Tufts Hospital</option>
+                                <option value="Boston medical">Boston Medical</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12 justify-content-end">
+                            <button type="submit" id="submit-filter" class="btn">Submit</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="modal" id="executeModal" tabindex="-1" role="dialog">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h3 class="modal-title">Your Driver</h3>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <h4>Your driver name is: <span id="driverName"></span></h4>
+                                <img id="driverImg">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+</body>
+
+</html>
+
+
+<!-- ======================================================================= -->
+
+<script type="text/javascript">
+    $("#submitBtn").on("click", function (event) {
+        event.preventDefault();
+        // Form validation
+        var valid = true;
+        if ($("#city-list").val() === "" || $("#category-list").val() === "") {
+            valid = false;
+        } else if ($("#needs-list").val() === "empty") {
+            valid = false;
+        }
+        if (valid === true) {
+            var newUser = {
+                name: $("#city-list").val().trim(),
+                photo: $("#category-list").val().trim(),
+                scores: $("#needs-list").val()
+
+            };
+            var currentURL = window.location.origin;
+            // Ajax call for receiving response after POST req
+            $.post(currentURL + "/api/drivers", newUser, function (data) {
+                $("#driverName").text(data.name);
+                $("#driverImg").attr("src", data.photo);
+                $("#executeModal").modal("toggle");
+            });
+        } else {
+            // If a required field is missing, show alert
+            alert("Survey is incomplete!");
+        }
+    });
+</script>
