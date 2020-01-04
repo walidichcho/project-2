@@ -11,6 +11,17 @@ var app = express();
 // this way will help when we use heroku
 var PORT = process.env.PORT || 8080;
 
+
+// / Serve static files
+//==========================================================
+
+app.use(express.static("app/public"));
+
+
+// app.use(express.static(process.cwd() + './public'));
+// app.use(express.static('./public/img'));
+// app.use(express.static('./public/css'));
+// app.use(express.static(__dirname + '/public'));
 // Sets up the Express app to handle data parsing
 
 app.use(express.urlencoded({ extended: true }));

@@ -1,4 +1,4 @@
-var friends = require("../data/drivers");
+var drivers = require("../data/drivers");
 
 module.exports = function (app) {
     // Return all friends found in friends.js as JSON
@@ -7,7 +7,7 @@ module.exports = function (app) {
     });
 
     app.post("/api/drivers", function (req, res) {
-        console.log(req.body.scores);
+        console.log(req.body.pickUp);
 
         // Receive user details (name, photo, scores)
         var user = req.body;
@@ -23,7 +23,7 @@ module.exports = function (app) {
         for (var i = 0; i < drivers.length; i++) {
 
             for (var j = 0; j < drivers[i].scores.length; j++) {
-                if (user.scores === drivers[i].scores) {
+                if (user.city === drivers[i].pickUp) {
                     bestDriverIndex = i;
 
                 }

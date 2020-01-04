@@ -1,0 +1,30 @@
+/* body{
+    background-image: url('https://cashdrive-hk.com/wp-content/uploads/2019/05/O72HCC0-1024x684.jpg');
+} */
+
+.container-fluid{
+   
+   
+    background: #ffffff;
+    border-radius: 10px;
+  
+
+     
+}
+#safety {
+    background-image: url("https://content.fortune.com/wp-content/uploads/2015/05/472264720.jpg?resize=1402,788");
+color: #ffffff;
+height: 500px;
+}
+    form {
+        background: #ffffff;
+        margin: 20px 20px;
+        padding: 20px;
+        box-shadow: 20px 20px;
+        
+    }
+    #totalBody{
+        
+        background-image: url('https://cashdrive-hk.com/wp-content/uploads/2019/05/O72HCC0-1024x684.jpg');
+height: 500px;
+    }
