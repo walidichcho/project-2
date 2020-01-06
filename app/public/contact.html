@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- <script src='https://kit.fontawesome.com/a076d05399.js'></script> -->
     <!--Get your own code at fontawesome.com-->
     <!-- load mapbox js and css -->
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
@@ -89,22 +89,33 @@
                     </h2>
                     <form action="#" class="bg-light p-5 contact-form">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name">
+                            <input type="text" id="name" class="form-control" placeholder="Your Name">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Email">
+                            <input type="text" id="email" class="form-control" placeholder="Your Email">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject">
+                            <input type="text" id="subject" class="form-control" placeholder="Subject">
                         </div>
                         <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="7" class="form-control"
+                            <textarea name="" id="message" cols="30" rows="7" class="form-control"
                                 placeholder="Message"></textarea>
                         </div>
-                        <div class="form-group">
-                            <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary btn-md" id="add-btn">
+                                <span class="fa fa-fire"></span> Add to the Force</button>
                         </div>
+
                     </form>
 
                 </div>
             </div>
+
+
+
+
+            <script src="js/add.js" type="text/javascript"></script>
+
+</body>
+
+</html>

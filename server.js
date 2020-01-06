@@ -1,39 +1,25 @@
-// npm package to be used in the app
-
 var express = require("express");
-var path = require("path");
 
-
-// Tells node that we are creating an "express" server
+// Sets up the Express App
+// =============================================================
 var app = express();
-
-// Sets an initial port. We"ll use this later in our listener
-// this way will help when we use heroku
-var PORT = process.env.PORT || 8080;
-
-
-// / Serve static files
-//==========================================================
-
-app.use(express.static("app/public"));
-
-
-// app.use(express.static(process.cwd() + './public'));
-// app.use(express.static('./public/img'));
-// app.use(express.static('./public/css'));
-// app.use(express.static(__dirname + '/public'));
-// Sets up the Express app to handle data parsing
+var PORT = process.env.PORT || 7500;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// router need to know that we are using app as server and we are using two router as path
-require("./app/routing/apiRoutes")(app);
-require("./app/routing/htmlRoutes")(app);
+// Static directory to be served
+app.use(express.static("app/public"));
 
+// Routes
+// =============================================================
+require("./app/routes/api-routes.js")(app);
 
-// listener function to tell the server with port we using
+// Here we introduce HTML routing to serve different HTML files
+require("./app/routes/html-routes.js")(app);
 
+// Starts the server to begin listening
+// =============================================================
 app.listen(PORT, function () {
-    console.log("App listening on PORT: " + PORT);
+    console.log("App listening on PORT " + PORT);
 });
