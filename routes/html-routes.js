@@ -5,7 +5,7 @@
 // Dependencies
 // =============================================================
 var path = require("path");
-
+const isAuthenticated = require("../auth/middleware/isAuthenticated")
 
 // Routes
 // =============================================================
@@ -28,6 +28,29 @@ module.exports = function (app) {
     // where all characters in the db are displayed
     app.get("/all", function (req, res) {
         res.sendFile(path.join(__dirname, "../app/public/all.html"));
+    });
+
+    app.get("/", function (req, res) {
+        // If the user already has an account send them to the members page
+        if (req.user) {
+            res.redirect("/members");
+        }
+        res.sendFile(path.join(__dirname, "../public/signup.html"));
+    });
+    //
+    app.get("/signin", function (req, res) {
+        // If the user already has an account send them to the members page
+        if (req.user) {
+            res.redirect("/members");
+        }
+        res.sendFile(path.join(__dirname, "../public/signin.html"));
+    });
+    //
+    // Here we've add our isAuthenticated middleware to this route.
+    // If a user who is not logged in tries to access this route they will be 
+    //redirected to the signup page
+    app.get("/members", isAuthenticated, function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/members.html"));
     });
 
 };
