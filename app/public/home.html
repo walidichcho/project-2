@@ -1,204 +1,132 @@
 <!DOCTYPE html>
-<html lang='en-us'>
+<html lang="en">
 
 <head>
-
-    <!-- <meta http-equiv="refresh" content="5" /> -->
-
     <meta charset="UTF-8">
-    <title>Hospital Transportation</title>
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-
-    <!-- Moment.js -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
-
-    <!-- CSS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- CSS Reset Sheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- CSS Sheet -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
-
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>Document</title>
 </head>
-<!-- class="container-fluid bg-info" -->
 
 <body>
-    <!-- // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-  // SECTION B.2. - MAP: Search Criteria
-  // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg my-nav" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Host<span>Trans</span></a>
+            <a class="navbar-brand" href="home.html">Host<span>Trans</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                 aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
-
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="home.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
-                    <li class="nav-item"><a href="car.html" class="nav-link">Our Car</a></li>
+                    <li class="nav-item"><a href="ride.html" class="nav-link">Ride</a></li>
                     <li class="nav-item"><a href="safety.html" class="nav-link">Safety</a></li>
-                    <li class="nav-item"><a href="/add" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-
-
-
-
-
-    <div class="container-fluid">
-
-        <div id="totalBody" class="row">
-            <!--   <div class="col-md-8"></div> -->
-            <!-- <div class="col-md-4"> -->
-
-            <div class="col-md-7">colum1</div>
-            <div class="col-md-5" id="form-dir">
-
-                <!-- <div id="whatTop" class="col-md-12 filter-title"> --> -->
-
-                <form>
-
-                    <!-- <div id="city-list" class="col-md-12">
-                     <div class="col-md-12 form-group">  -->
-                    <div>
-                        <h5>Enter pick up location.</h5>
-                        <select id="city-list" class="custom-select" aria-labelledby="dropdownMenuButton">
-
-                            <option disable selected>City</option>
-                            <option value="Boston">Boston</option>
-                            <option value="Brookline">Brookline</option>
-                            <option value="Cambridge">Cambridge</option>
-                            <option value="Medford">Medford</option>
-                            <option value="Milton">Milton</option>
-                            <option value="Quincy">Quincy</option>
-                            <option value="Somerville">Somerville</option>
-                            <option value="Woburn">Woburn</option>
-                        </select>
-                        <br>
-
-                    </div>
-                    <!-- <div id="category-list" class="col-md-12">
-        <div class="col-md-12 form-group"> -->
-                    <select id="need-list" class="custom-select" aria-labelledby="dropdownMenuButton">
-                        <option disable selected>Special Need</option>
-                        <option value="wheelchair">wheelchair</option>
-                        <option value="Assistant">Assistant</option>
-                        <option value="Walker">Walker</option>
-                        <option value="phisical">Phisical Help</option>
-                        <option value="Mental">Mental Help</option>
-
-                    </select>
-                    <!-- </div>
-    </div> -->
-                    <br>
-                    <!-- <div id="whatTop" class="col-md-12 filter-title"> -->
-
-                    <!-- </div> -->
-
-                    <!-- <div id="needs-list" class="col-md-12">
-        <div class="col-md-12 form-group"> -->
-                    <div>
-                        <h5>Enter drop-off location.</h5>
-                        <select id="Hospitals-list" class="custom-select" aria-labelledby="dropdownMenuButton">
-                            <option disable selected>City</option>
-                            <option value="MGH">Mass General Hospital</option>
-                            <option value="Tufts Hospital">Tufts Hospital</option>
-                            <option value="Boston medical">Boston Medical</option>
-
-                        </select>
-
-
-                    </div>
-                    <br>
-                    <!-- <div class="row">
-        <div class="form-group col-md-12 justify-content-end"> -->
-                    <div>
-                        <button type="submit" id="submit-filter" class="btn">Submit</button>
-                    </div>
-
-                </form>
-            </div>
+    <div class="video-header wrap">
+        <div class=" fullscreen-video-wrap">
+            <video autoplay muted loop playsinline src="https://swarmify.com/demo_video.mp4"></video>
         </div>
-    </div>
-
-
-
-    <div class="modal" id="executeModal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Your Driver</h3>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <h4>Your driver name is: <span id="driverName"></span></h4>
-                    <img id="driverImg">
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
+        <section class="section section-a">
+            <div class="container">
+                <h1>knfkdk</h1>
+                <p>kfekjfknfljnjfrjbgjbgjlwigrwignrngiorejgrjgi</p>
             </div>
-        </div>
-
-
-
-
-
-
-
-
-
-
+        </section>
+        <!-- Footer -->
+        <footer class="page-footer font-small  pt-4">
+            <!-- Footer Links -->
+            <div class="container-fluid text-center text-md-left">
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-6 mt-md-0 mt-3">
+                        <!-- Content -->
+                        <h5 class="text-uppercase">Footer Content</h5>
+                        <p>Here you can use rows and columns to organize your footer content.</p>
+                    </div>
+                    <!-- Grid column -->
+                    <hr class="clearfix w-100 d-md-none pb-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+                        <!-- Links -->
+                        <h5 class="text-uppercase">HostTrans</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="#!">Why HostTrans</a>
+                            </li>
+                            <li>
+                                <a href="#!">Cities>
+                            </li>
+                            <li>
+                                <a href="#!">Fare Estimate</a>
+                            </li>
+                            <li>
+                                <a href="#!">Help</a>
+                            </li>
+                            <li>
+                                <a href="#!">Help</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Links -->
+                    <div class="col-md-3 mb-md-0 mb-3">
+                        <h5 class="text-uppercase">Ride</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="signup.html">Sign up to Ride</a>
+                            </li>
+                            <li>
+                                <a href="signin.html">Sign in to Ride</a>
+                            </li>
+                            <li>
+                                <a href="ride.html">Ride</a>
+                            </li>
+                            <li>
+                                <a href="safety.html">Safety</a>
+                            </li>
+                            <li>
+                                <a href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                        <!-- Grid column -->
+                    </div>
+                </div>
+                <!-- Grid row -->
+            </div>
+            <!-- Footer Links -->
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">© 2020 Copyright:
+                <a href="https://mdbootstrap.com/education/bootstrap/"> MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
-
-
-
-
-
-<!-- ======================================================================= -->
-
-<script type="text/javascript">
-    $("#submitBtn").on("click", function (event) {
-        event.preventDefault();
-        // Form validation
-        var valid = true;
-        if ($("#city-list").val() === "" || $("#category-list").val() === "") {
-            valid = false;
-        } else if ($("#needs-list").val() === "empty") {
-            valid = false;
-        }
-        if (valid === true) {
-            var newUser = {
-                city: $("#city-list").val().trim(),
-                category: $("#category-list").val().trim(),
-
-            };
-            var currentURL = window.location.origin;
-            // Ajax call for receiving response after POST req
-            $.post(currentURL + "/api/drivers", newUser, function (data) {
-                $("#driverName").text(data.name);
-                $("#driverImg").attr("src", data.photo);
-                $("#executeModal").modal("toggle");
-            });
-        } else {
-            // If a required field is missing, show alert
-            alert("incomplete!");
-        }
-    });
-</script>
