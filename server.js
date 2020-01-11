@@ -1,9 +1,9 @@
 var express = require("express");
-
+const db = require("./models");
 // Sets up the Express App
 // =============================================================
 var app = express();
-var PORT = process.env.PORT || 7500;
+var PORT = 4000;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -13,13 +13,19 @@ app.use(express.static("app/public"));
 
 // Routes
 // =============================================================
-require("./app/routes/api-routes.js")(app);
+require("./routes/api-routes.js")(app);
 
 // Here we introduce HTML routing to serve different HTML files
-require("./app/routes/html-routes.js")(app);
+require("./routes/html-routes.js")(app);
 
+app.get("/health", (req, res) => {
+    res.json({ success: true })
+})
 // Starts the server to begin listening
 // =============================================================
-app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
-});
+db.sequelize.sync().then(() => {
+    app.listen(PORT, function () {
+        console.log("App listening on PORT " + PORT);
+    });
+})
+
