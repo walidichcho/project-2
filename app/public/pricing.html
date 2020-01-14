@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Simple Map</title>
+    <title>Request a Ride</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -17,10 +17,25 @@
         /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
         #map {
-            height: 50%;
-            width: 50%;
+            height: 60%;
+            width: 60%;
+            float: left;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 115px;
         }
 
+        #result {
+            display: none;
+            clear: left;
+            margin-top: 40px;
+        }
+
+        #distance_form {
+            margin-top: 90px;
+            margin-bottom: 30px;
+            margin-left: 15px;
+        }
         /* Optional: Makes the sample page fill the window. */
         html,
         body {
@@ -34,9 +49,10 @@
 <body>
     <div id="map"></div>
     <div class="container">
+
         <div class="row">
-            <h1>Calculate the distance between two adresses</h1>
-            <div class="col-md-6">
+            <!-- <h1>Calculate the distance between two adresses</h1> -->
+            <div class="col-md-12">
                 <form id="distance_form">
                     <div class="form-group">
                         <label>origin:</label>
@@ -50,29 +66,30 @@
                         <input type="hidden" id="destination" name="destination" required />
                     </div>
 
-                    <input type="submit" value="calculate" class="btn btn-primary" />
+                    <input type="submit" value="Calculate" class="btn btn-primary" />
                 </form>
-                <div id="result">
-                    <ul id="result">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">Distance in Miles:
-                            <span id="in_Mile" class="badge badge-primary badge-pill"></span></li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">In text:
-                            <span id="duration_text" class="badge badge-primary badge-pill"></span></li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">In Minutes:
-                            <span id="duration_value" class="badge badge-primary badge-pill"></span></li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">From:
-                            <span id="from" class="badge badge-primary badge-pill"></span></li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">To:
-                            <span id="to" class="badge badge-primary badge-pill"></span></li>
-
-
-
-                    </ul>
-
-                </div>
+ 
             </div>
         </div>
 
+    </div>
+
+    <div class="container">
+        <div id="result">
+            <ul id="result">
+                <li class="list-group-item d-flex justify-content-between align-items-center">Distance in Miles:
+                    <span id="in_Mile" class="badge badge-primary badge-pill"></span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">In text:
+                    <span id="duration_text" class="badge badge-primary badge-pill"></span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">In Minutes:
+                    <span id="duration_value" class="badge badge-primary badge-pill"></span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">From:
+                    <span id="from" class="badge badge-primary badge-pill"></span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">To:
+                    <span id="to" class="badge badge-primary badge-pill"></span></li>
+
+            </ul>
+        </div>
     </div>
 
 
