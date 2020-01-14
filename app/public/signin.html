@@ -36,54 +36,126 @@
 
 <body>
     <!-- Sign-in Card-->
-    <div class="col-lg-6">
-        <div class="card card-default">
-            <div class="card-header">
-                <p>SIGN IN</p>
-            </div>
-            <div class="card-body">
-                <div id="login_div" class="main-div">
-                    <div class="form-group row">
-                        <label for="email-input">Email:</label>
-                        <input class="form-control" id="email-input" type="email" placeholder="Enter Email" name="email"
-                            required>
-                    </div>
-                    <div class="form-group row">
-                        <label for="psw-input"><b>Password</b></label>
-                        <input type="password" id="psw-input" splaceholder="Enter Password" name="psw" required>
-                    </div>
-                    <div class="missmatch"></div>
-                    <button type="submit" id="btn-signin" onSubmit="validateForm();" class="registerbtn">Sign
-                        In</button>
-                    </form>
-                    <!-- onclick="login()"-->
-                </div>
-            </div>
-        </div>
-        <!-- Most Recent Member Card -->
-        <!-- <div class="col-lg-6">
-            <div class="card card-default">
-                <div class="card-header">
-                    Most Recent Member
-                </div>
-                <div class="card-body" id="recent-member">
-                    <h4 id="email-display">Email: jimmy@john.edu</h4>
-                    <h2 id="password-display">red/h2>
-                </div>
-            </div>
-        </div> -->
-        <!-- Script -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-            crossorigin="anonymous"></script>
-        <script type="text/javascript" src="signin.js"></script>
-        <!-- <script type="text/javascript" src="signup.js"></script> -->
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #fff;
+            background-image: url('img/car1.jpg');
+            background-size: cover;
+        }
+
+        .signin {
+            background: rgba(44, 62, 80, 0.7);
+            padding: 40px;
+            width: 350px;
+            margin: auto;
+            margin-top: 80px;
+            height: 500px;
+            margin-left: 500px;
+            margin: 0 auto;
+            margin-top: 90px;
+        }
+
+        form {
+            width: 240px;
+            text-align: center;
+        }
+
+        input {
+            width: 240px;
+            text-align: center;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #fff;
+            font-family: "Play", sans-serif;
+            font-size: 16px;
+            font-weight: 200px;
+            padding: 10px 0;
+            transition: border 0.5s;
+            outline: none;
+            color: #fff;
+
+        }
+
+        input[type=button] {
+            border: none;
+            width: 190px;
+            background: white;
+            color: #000;
+            font-size: 16px;
+            line-height: 25px;
+            padding: 10 px 0;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        input[type=button]:hover {
+            color: #fff;
+            background-color: black;
+
+        }
+
+        h2 {
+            color: white;
+        }
+
+        a {
+            color: yellow;
+            text-decoration: blink;
+        }
+
+        a:hover {
+            color: skyblue;
+
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        ::placeholder {
+            color: aliceblue;
+            opacity: 0.8;
+        }
+    </style>
+
+    <div class="signin">
+        <form>
+            <h2 style="color:white">Log In</h2>
+            <input type="text" name="email" placeholder="Email">
+            <input type="password" name="pass" placeholder="Password"><br><br>
+            <a href=""><input type="button" value="Log In"></a><br><br>
+            <div id="container">
+                <a href="#" style="margin-right:0px; font-size: 13px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Reset
+                    Password</a>
+                <a href="#" style="margin-right:0px; font-size: 13px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Forgot
+                    Password</a>
+            </div><br><br><br><br><br><br>
+            Don't have an account?<a href="signup.html">&nbsp;Sign Up</a>
+        </form>
+
+
+    </div>
+
+
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="signin.js"></script>
+    <!-- <script type="text/javascript" src="signup.js"></script> -->
 </body>
 
 </html>
