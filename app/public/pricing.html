@@ -2,22 +2,39 @@
 <html>
 
 <head>
-    <title>Simple Map</title>
+    <title>Request a Ride</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASOoy7K9T8QyeA6QysbWUd5-E54b9ZmkU&libraries=places,">
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASOoy7K9T8QyeA6QysbWUd5-E54b9ZmkU&callback=initMap"
+    <script
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyASOoy7K9T8QyeA6QysbWUd5-E54b9ZmkU&callback=initMap"
         async defer></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <style>
         /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
         #map {
-            height: 50%;
-            width: 50%;
+            height: 60%;
+            width: 60%;
+            float: left;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 115px;
+        }
+
+        #result {
+            display: none;
+            clear: left;
+            margin-top: 40px;
+        }
+
+        #distance_form {
+            margin-top: 90px;
+            margin-bottom: 30px;
+            margin-left: 15px;
         }
 
         /* Optional: Makes the sample page fill the window. */
@@ -33,45 +50,47 @@
 <body>
     <div id="map"></div>
     <div class="container">
+
         <div class="row">
-            <h1>Calculate the distance between two adresses</h1>
-            <div class="col-md-6">
+            <!-- <h1>Calculate the distance between two adresses</h1> -->
+            <div class="col-md-12">
                 <form id="distance_form">
                     <div class="form-group">
-                        <label>origin:</label>
-                        <input class="form-control" id="from_places" placeholder="Enter a location" />
-                        <input type="hidden" id="origin" name="distination" required />
+                        <label>Origin:</label>
+                        <input class="form-control" id="from_places" placeholder="Enter a Origin Location" />
+                        <input type="hidden" id="origin" name="origin" required />
                     </div>
 
                     <div class="form-group">
                         <label>Destination:</label>
-                        <input class="form-control" id="to_places" placeholder="Enter a location" />
-                        <input type="hidden" id="destination" name="distination" required />
+                        <input class="form-control" id="to_places" placeholder="Enter a Destination Location" />
+                        <input type="hidden" id="destination" name="destination" required />
                     </div>
 
-                    <input type="submit" value="calculate" class="btn btn-primary" />
+                    <input type="submit" value="Calculate" class="btn btn-primary" />
                 </form>
-                <div id="result">
-                    <ul id="result">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">Distance in Miles:
-                            <span id="in_Mile" class="badge badge-primary badge-pill"></span></li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">In text:
-                            <span id="duration_text" class="badge badge-primary badge-pill"></span></li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">In Minutes:
-                            <span id="duration_value" class="badge badge-primary badge-pill"></span></li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">From:
-                            <span id="from" class="badge badge-primary badge-pill"></span></li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">To:
-                            <span id="to" class="badge badge-primary badge-pill"></span></li>
 
-
-
-                    </ul>
-
-                </div>
             </div>
         </div>
 
+    </div>
+
+    <div class="container">
+        <div id="result">
+            <ul id="result">
+                <li class="list-group-item d-flex justify-content-between align-items-center">Distance in Miles:
+                    <span id="in_Mile" class="badge badge-primary badge-pill"></span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">In text:
+                    <span id="duration_text" class="badge badge-primary badge-pill"></span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">In Minutes:
+                    <span id="duration_value" class="badge badge-primary badge-pill"></span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">From:
+                    <span id="from" class="badge badge-primary badge-pill"></span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">To:
+                    <span id="to" class="badge badge-primary badge-pill"></span></li>
+
+            </ul>
+        </div>
     </div>
 
 
@@ -83,39 +102,39 @@
                 zoom: 13
             });
         }
-
-        // =====================
-        // distance
         $(function () {
             //add input listener
-            google.maps.event.addDomlistener(window, 'load', function () {
+            google.maps.event.addDomListener(window, 'load', function () {
                 var from_places = new google.maps.places.Autocomplete(document.getElementById('from_places'));
                 var to_places = new google.maps.places.Autocomplete(document.getElementById('to_places'));
 
                 google.maps.event.addListener(from_places, 'place_changed', function () {
-                    var from_places = from_places.getplace();
-                    var from_address = from_places.formatted.address;
-                    $('#origin').val(from_address);
+                    //var from_places = from_places.getPlace();
+                    //var from_address = from_places.formatted.address;
+                    $('#origin').val(from_places);
                 });
 
-                google.maps.event.addListener(from_places, 'place_changed', function () {
-                    var to_places = to_places.getplace();
-                    var to_address = to_places.formatted.address;
-                    $('#destination').val(to_address);
+                google.maps.event.addListener(to_places, 'place_changed', function () {
+                    //var to_places = to_places.getPlace();
+                    //var to_address = to_places.formatted.address;
+                    $('#destination').val(to_places);
                 });
 
             });
+
             // calculate the distance
-            function calculatedistance() {
+            function calculateDistance() {
+                //var origin = from_places;
+                //var destination = to_places;
                 var origin = $('#origin').val();
                 var destination = $('#destination').val();
                 var service = new google.maps.DistanceMatrixService();
                 service.getDistanceMatrix(
                     {
-                        origin: [origin],
-                        destination: [destination],
+                        origins: [origin],
+                        destinations: [destination],
                         travelMode: google.maps.TravelMode.DRIVING,
-                        unitsystem: google.maps.UnitSystem.IMPERIAL,
+                        unitSystem: google.maps.UnitSystem.IMPERIAL,
                         avoidHighways: false,
                         avoidTolls: false
                     }, callback);
@@ -135,20 +154,16 @@
                 $('#from').text(origin);
                 $('#to').text(destination);
             }
+            $('#distance_form').submit(function (e) {
+                e.preventDefault();
+                calculateDistance();
+            })
         })
+
         // print result on submut the form
-        $('#distance_form').submit(function (e) {
-            e.preventDefault();
-            calculatedistance();
-        })
-
-
-
-
 
 
     </script>
-
 
 </body>
 
