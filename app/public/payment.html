@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Payment</title>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+<Style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/97/Boston_Sky.jpg");
+
+
+    }
+
+
+    .wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500px;
+        height: 350px;
+    }
+
+    /* .wrapper .checkout_wrapper {
+        width: 100px;
+        height: 100px;
+        display: flex;
+    } */
+
+    /* .wrapper .checkout_wrapper .product_info {
+        width: 69%;
+        background-color: #e85c4d;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        position: relative;
+
+    } */
+
+    /* .wrapper .checkout_wrapper .product_info img {
+        width: 240px;
+        margin-top: 30px;
+        margin-left: 5px;
+    } */
+    /* .wrapper .checkout_wrapper .product_info .content {
+        text-align: center;
+        margin-top: 25px;
+        color: #fff;
+        text-transform: uppercase;
+    } */
+
+    /* .wrapper .checkout_wrapper .product_info .content h3 {
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 3px;
+    } */
+
+    /* .wrapper .checkout_wrapper .product_info .content p {
+        font-size: 14px;
+        margin-top: 10px;
+    } */
+
+    .wrapper .checkout_wrapper .checkout_form {
+        width: 55%;
+        background: #fff;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding: 50px 30px;
+    }
+
+    .wrapper .checkout_wrapper .checkout_form p {
+        margin-bottom: 25px;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    .wrapper .checkout_wrapper .checkout_form .section {
+        margin-bottom: 15px;
+    }
+
+    /* .wrapper .checkout_wrapper .checkout_form .section input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #dddddd;
+    } */
+
+    .wrapper .checkout_wrapper .checkout_form .section input[type="text"]:focus {
+        border-color: #e85c4d;
+    }
+
+    .wrapper .checkout_wrapper .checkout_form .section.last_section {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .wrapper .checkout_wrapper .checkout_form .section.last_section .item {
+        width: 48%;
+    }
+
+
+    .wrapper .checkout_wrapper .checkout_form .btn {
+        background: #e85c4d;
+        padding: 10px;
+        border-radius: 25px;
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .wrapper .checkout_wrapper .checkout_form .btn a {
+        color: #fff;
+        letter-spacing: 5px;
+        display: block;
+    }
+
+    #message {
+        visibility: hidden;
+        width: 55%;
+        background: #fff;
+        border-top-right-radius: 30px;
+        border-bottom-right-radius: 30px;
+        padding: 50px 30px;
+        margin: 100px 100px;
+        margin-left: 300px;
+        text-align: center;
+        top: 50%;
+
+    }
+</Style>
+
+<body>
+
+
+    <div id="ride">
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+            <div class="container">
+                <a class="navbar-brand" href="home.html">Host<span>Trans</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
+                    aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="oi oi-menu"></span> Menu
+                </button>
+
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="home.html" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="ride.html" class="nav-link">Ride</a></li>
+                        <li class="nav-item"><a href="safety.html" class="nav-link">Safety</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                        <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="wrapper">
+            <div class="checkout_wrapper">
+                <div class="product_info">
+                    <!-- <img ser="" alt="product_image"> -->
+                    <div class="content">
+                        <h3></h3>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="checkout_form" id="checkform">
+                    <p>Payment Selection</p>
+                    <div class="details">
+                        <div class="section">
+                            <input type="text" placeholder="Card Number">
+                        </div>
+                        <div class="section">
+                            <input type="text" placeholder="Cardholder Name">
+                        </div>
+                        <div class="section">
+                            <input type="text" placeholder="Expiration Date">
+                        </div>
+                        <div class="section last_section">
+                            <!-- <div class="item">
+                                <input type="text" placeholder="Card Number"><br>
+                            </div> -->
+                            <div class="item">
+                                <input type="text" placeholder="CVV">
+                            </div>
+                        </div>
+                        <div class="btn" id="myBtn">
+
+                            <a href="#">Pay</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="message">
+            <h3> The driver will be there soon.</h3>
+            <p>Thank you for your business</p>
+            <p> hope to see you again</p>
+
+
+        </div>
+        <script>
+            let PayButton = document.getElementById("myBtn")
+            PayButton.addEventListener("click", myFunction);
+
+            function myFunction() {
+                $(document).ready(function () {
+                    document.getElementById("message").style.visibility = "visible";
+
+
+                    $("#checkform").hide();
+
+                });
+
+            }
+        </script>
+
+</body>
+
+</html>
