@@ -18,6 +18,11 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../app/public/home.html"));
     });
 
+
+    app.get("/ride", function (req, res) {
+        res.sendFile(path.join(__dirname, "../app/public/ride.html"));
+
+    });
     // add route loads the add.html page,
     // where users can enter new characters to the db
     app.get("/add", function (req, res) {
@@ -30,27 +35,27 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../app/public/all.html"));
     });
 
+    app.get("/pricing", function (req, res) {
+        res.sendFile(path.join(__dirname, "../app/public/pricing.html"));
+    });
+
     app.get("/", function (req, res) {
-        // If the user already has an account send them to the members page
+        // If the user already has an account send them to the home page
         if (req.user) {
-            res.redirect("/members");
+            res.redirect("/home");
         }
-        res.sendFile(path.join(__dirname, "../public/signup.html"));
+        res.sendFile(path.join(__dirname, "../app/public/signup.html"));
     });
     //
     app.get("/signin", function (req, res) {
-        // If the user already has an account send them to the members page
+        // If the user already has an account send them to the home page
         if (req.user) {
-            res.redirect("/members");
+            res.redirect("/home");
         }
-        res.sendFile(path.join(__dirname, "../public/signin.html"));
+        res.sendFile(path.join(__dirname, "../app/public/signin.html"));
     });
     //
     // Here we've add our isAuthenticated middleware to this route.
     // If a user who is not logged in tries to access this route they will be 
-    //redirected to the signup page
-    app.get("/members", isAuthenticated, function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/members.html"));
-    });
 
 };

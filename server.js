@@ -2,11 +2,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 const db = require("./models");
 var session = require("express-session");
-
 // Requiring passport as we've configured it
 var passport = require("./auth/middleware/passport");
-
-
 
 // Sets up the Express App
 // =============================================================
