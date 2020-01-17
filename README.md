@@ -31,6 +31,13 @@ This application is delployed at
 *   Pinar Kaya
 *   Naima Bensassi
 
+## Sign Up
 ![Buy-Product-Customer](app/public/img/Screenshot1.png)
+
+## Sign In
+![Buy-Product-Customer](app/public/img/Screenshot2.png)
+
+## Contact
+![Buy-Product-Customer](app/public/img/Screenshot3.png)
 
 
