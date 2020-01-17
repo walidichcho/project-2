@@ -31,6 +31,6 @@ This application is delployed at
 *   Pinar Kaya
 *   Naima Bensassi
 
-![GitHub Logo](/img/Screenshot1.png)
-![GitHub Logo](/img/Screenshot2.png)
-![GitHub Logo](/img/Screenshot3.png)
+(/img/Screenshot1.png)
+(/img/Screenshot2.png)
+(/img/Screenshot3.png)
