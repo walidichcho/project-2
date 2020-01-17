@@ -3,6 +3,9 @@
 
 HostTrans
 
+This app will promote equal access to transportation for people with disabilities promoting improved accessibility for special cars
+
+
 Overview
 
 HostTrans App is a transportation service utilizing Node, Express, and the Sequelize ORM. Following the MVC design pattern, Node and Sequelize will route data from JavaScript and HTML.
