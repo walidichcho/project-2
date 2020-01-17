@@ -2,11 +2,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 const db = require("./models");
 var session = require("express-session");
-
 // Requiring passport as we've configured it
 var passport = require("./auth/middleware/passport");
-
-
 
 // Sets up the Express App
 // =============================================================
@@ -30,6 +27,7 @@ require("./routes/api-routes.js")(app);
 
 // Here we introduce HTML routing to serve different HTML files
 require("./routes/html-routes.js")(app);
+require("./routes/auth_routes.js")(app);
 
 app.get("/health", (req, res) => {
     res.json({ success: true })

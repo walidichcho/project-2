@@ -10,7 +10,7 @@ module.exports = function (app) {
         if (req.params.contacts) {
             // Display the JSON for ONLY that character.
             // (Note how we're using the ORM here to run our searches)
-            Contact.findOne({
+            db.Contact.findOne({
                 where: {
                     name: req.params.contacts
                 }
@@ -37,8 +37,14 @@ module.exports = function (app) {
         });
         res.status(204).end();
     });
-    app.get("/justin", (req, res) => {
-        res.json({ success: "true" })
+
+    app.post("/api/user/new", (req, res) => {
+        db.User.create({ email: req.body.email, password: req.body.password }).then(r => {
+            res.json(r)
+        }).catch(err => {
+            console.log(err)
+            res.json({ succes: false })
+        })
     })
 };
 
