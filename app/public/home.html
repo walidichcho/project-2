@@ -1,226 +1,656 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- CSS Reset Sheet -->
-    <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- CSS Sheet -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans&display=swap" rel="stylesheet">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <title>HostTrans</title>
+	<meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HostTrans - Hospital Special Company</title>
+
+	<!-- Standard Favicon -->
+	<link rel="icon" type="image/x-icon" href="./images/HostTrans Logo-fav.png" />
+	
+	<!-- For iPhone 4 Retina display: -->
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images//apple-touch-icon-114x114-precomposed.png">
+	
+	<!-- For iPad: -->
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images//apple-touch-icon-72x72-precomposed.png">
+	
+	<!-- For iPhone: -->
+	<link rel="apple-touch-icon-precomposed" href="images//apple-touch-icon-57x57-precomposed.png">	
+	
+	<!-- Library - Loader CSS -->
+	<link rel="stylesheet" type="text/css" href="libraries/loader/loaders.min.css">
+
+	<!-- Library - Google Font Familys -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lato:400,100italic,100,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+		
+	<!-- Library - Bootstrap v3.3.5 -->
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap-datetimepicker.min.css">
+	
+	<!-- Font Icons -->
+	<link rel="stylesheet" type="text/css" href="libraries/fonts/font-awesome.min.css">
+
+	<!-- Library - OWL Carousel V.2.0 beta -->
+	<link rel="stylesheet" type="text/css" href="libraries/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="libraries/owl-carousel/owl.theme.css">
+
+	<!-- Library - FlexSlider v2.5.0 -->
+	<link rel="stylesheet" type="text/css" href="libraries/flexslider/flexslider.css">
+
+	<!-- Library - Animate CSS -->
+	<link rel="stylesheet" type="text/css" href="libraries/animate/animate.min.css">
+
+	<!-- Custom - Common CSS -->
+	<link rel="stylesheet" type="text/css" href="css/plugins.css">
+	<link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
+
+	<!-- Custom - Theme CSS -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="css/shortcodes.css">
+
 </head>
 
-<body>
+<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+		
+	<a id="top"></a>
+	<!-- Main Container -->
+	<div class="main-container">
+	<!-- Header -->
+	<header class="header-main">
+		<!-- Top Header -->
+		<div class="top-header container-fluid no-padding">
+			<!-- Container -->
+			<div class="container">
+				<div class="col-md-8 pull-right top-menu">
+					<ul class="no-bottom-margin">
+						<li><a href="signin.html">Sign In</a></li>
+					</ul>
+				</div>
+			</div><!-- Container /- -->
+		</div><!-- Top Header /- -->
 
+		<nav class="navbar ow-navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+					<div class="navbar-brand" id="logo_navbar">
+						<a href="#">
+							<img src="./images/HostTrans Logo-80.png" alt="Logo" style="margin-top: -21px;" />
+						</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li><a href="about.html">About Us</a></li>
+						<li><a href="safety.html">Safety</a></li>
+						<li><a href="faq.html">Faq</a></li>
+						<li><a href="contact-us.html">Contact US</a></li>							
+					</ul>						
+				</div>
+				<a href="booking.html">Book For A Ride</a>
+			</div>
+		</nav>
+	</header><!-- Header /- -->
 
-    <nav class="navbar navbar-expand-lg my-nav" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Host<span>Trans</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
+	<!-- Photo Slider2 -->	
+	<div class="container-fluid photos-slider2 no-padding">
+		<div id="photos-slider2" class="carousel slide" data-ride="carousel">			
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<img src="./images/photos-slider/photo-slide-3.jpg" alt="side-1"/>
+					<div class="container photos-slider2-content">						
+						<div class="col-md-8 col-sm-12 col-xs12 pull-right">
+							<div class="slider-content">
+								<h2>Timely, Safe and</h2>
+								<h2>Compassionate</h2>
+								<p>We Offer The Best Service In The City</p>							
+								<a href="./about.html" title="Learn More" class="learn-more">Learn More</a>		
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<img src="./images/photos-slider/photo-slide-4.jpg" alt="side-1"/>
+					<div class="container photos-slider2-content">						
+						<div class="col-md-8 col-sm-12 col-xs12 pull-right">
+							<div class="slider-content">
+								<h2>A reliable </h2>
+								<h2>special transportation</h2>
+								<p>We are here to better server you</p>							
+								<a href="./about.html" title="Learn More" class="learn-more">Learn More</a>		
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Booking Form -->
+		<div class="booking-form">
+			<div class="container">
+				<div class="col-md-4">
+					<form name="book-car" class="book-car-form">
+						<h3>Book Your Car Now</h3>	
+						<div class="form-group col-md-6 col-sm-6">
+							<label for="txt_name">Name :</label>
+							<input type="text" class="form-control" id="txt_name" placeholder="Your Name" />
+						</div>
+						<div class="form-group col-md-6 col-sm-6">
+							<label for="txt_phone">Phone Number :</label>
+							<input type="text" class="form-control" id="txt_phone" placeholder="Enter Phone Number" />
+						</div>
+						<div class="form-group col-md-6 col-sm-6">
+							<label for="txt_startfrom">Pickup Place :</label>
+							<input type="text" class="form-control" id="origin" placeholder="Start From" />
+						</div>
+						<div class="form-group col-md-6 col-sm-6">
+							<label for="txt_drop">Drop Place :</label>
+							<input type="text" class="form-control" id="destination" placeholder="Drop To" />
+						</div>
+		
+						<div class="form-group col-md-12">
+							<label for="txt_drop">Date Pickup :</label>									
+							<div id="datepicker" class="input-group">
+								<input class="form-control" data-format="yyyy-MM-dd" type="text" placeholder="DD/MM/YYYY" />
+								<span class="add-on">
+									<i data-time-icon="icon-time" data-date-icon="icon-calendar"><img src="images/icon/date-picker.png" alt="datepicker" /></i>
+								</span> 
+							</div>
+						</div>
+						<div class="form-group col-md-12">
+							<div id="timepicker" class="input-group time-picker">
+								<div class="col-md-4 col-sm-4 col-xs-4"><input class="form-control" min="1" max="12" type="number" /></div>
+								<div class="col-md-4 col-sm-4 col-xs-4"><input class="form-control" min="1" max="60" type="number" /></div>
+								<div class="col-md-4 col-sm-4 col-xs-4"><select class="form-control"><option>AM</option><option>PM</option></select></div>
+							</div>
+						</div>
+						<div class="col-md-12"><button type="submit" title="submit" class="btn">Submit</button></div>
+					</form>
+				</div>
+			</div>
+		</div><!-- Booking Form /- -->
+	</div ><!-- Photo Slider/- -->
+	
+	<!-- What We Do -->
+	<div class="container-fluid no-padding what-we-do">
+		<div class="section-padding"></div>
+		<div class="image-box">
+			<img src="./images/services/service-1_a.jpg" alt="service" />
+		</div>
+		<!-- Container -->
+		<div class="container">			
+			<div class="col-md-8 pull-right">
+				<div class="col-md-6 col-sm-6">
+					<div class="about">
+						<h3>Get To Know</h3>
+						<h2>Who We Are</h2>
+						<p>Since 2019, we’ve provided compassionate, safe and timely transport.</p>
+						<p>With a large fleet of vehicles and a
+							rigorously trained staff, we ensure reliable rides and can assist any passenger — no matter what
+							disabilities, special needs or challenges they face. We take great pride in every element of our work to
+							best assist those in need. </p>
+						<a href="./about.html" title="Know More">Know More</a>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 no-right-padding">
+					<div class="more-than-you">
+						<div class="section-header">
+							<h3>We Do More Than You Wish</h3>
+						</div>
+						<ul>
+							<li>Trained and Professional drivers </li>
+							<li>New and confortable cars</li>
+							<li>Safety guides to better server you </li>
+							<li>Fast services</li>
+							<li>Affordable rates</li>
+						</ul>
+						<p>We partner with healthcare facilities to provide consistent, reliable transportation for non-emergency
+							patients.</p>
+					</div>
+				</div>
+			</div>
+		</div><!-- Container/-  -->
+		<div class="section-padding"></div>
+	</div><!-- What We Do/- -->
+	
+	<!-- Services -->
+	<div class="container-fluid no-padding services">
+		<div class="section-padding"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 col-sm-6">
+					<div class="service-box">
+						<h3>Enjoy The</h3>
+						<h2>Services We Offer</h2>
+						<p>At HostTrans, we have invested in a large staff of highly-qualified and
+							well-trained FSRs. Our professionalism combined with a large, reliable and fully-equipped fleet of
+							vehicles ensures our ability to transport any non-emergency patient, handle any volume of rides and keep wait times to a minimum.</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="service-box">
+						<div id="sevice-slider" class="carousel slide" data-ride="carousel">			
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img src="./images/services/service-3.jpg"/>
+								</div>
+								<div class="item">
+									<img src="./images/services/service-4.jpg"/>									
+								</div>
+								<div class="item">
+									<img src="./images/services/service-5.jpg"/>									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="service-box content">
+						<div class="section-box-title">
+							<img src="./images/services/icon-3.png" alt="home-pickup"/>
+							<span>Here to help you</span>
+						</div>
+						<p>Provide reliable, cost-efficient rides while reducing costs and gaining better visibility into your ride spend.</p>
+						<a href="./about.html" title="Read More">Read More ...</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="service-box content">
+						<div class="section-box-title">
+							<img src="images/icon/anytime.png" alt="anytime"/>
+							<span>Anytime Customer Support</span>
+						</div>
+						<p>We operate an HostTrans support line for riders and drivers 24/7. Just Call 1 800-RIDE-HostTrans to be connected to our team</p>
+						<a href="./about.html" title="Read More">Read More ...</a>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="service-box video">
+						<img src="./images/services/service-4.jpg" alt="service-4"/>
+						<a href="https://youtu.be/rHFonYGAK0M" title="Play"><img src="images/icon/play.png" alt="Play"/><p>Play Video</p></a>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+					<div class="service-box book-now">
+						<p>Find out how we’ve got your back, before, during, and after the ride when you’re driving with HostTrans — safety is built into every stage of your journey.</p>
+						<a href="online-booking.html" title="Book Now">Book Now</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section-padding"></div>
+	</div><!-- -Services/- -->
+	
+	<!-- Members -->
+	<div class="container-fluid no-padding members members-style2">
+		<div class="section-padding"></div>			
+		<!-- Section Header -->
+		<div class="section-header"><h3>Drivers On Your Service</h3></div><!-- Section Header /- -->
+		<!-- Members Carousel -->
+		<div class="member-carousel">
+			<div id="member">
+				<div class="member-item">
+					<img src="images/members/member-2.1.jpg" alt="member-1"/>
+					<div class="driver-info">
+						<div class="driver">
+							<h3>William Turner</h3>
+						</div>
+						<p>Specialized Driver<span>Skill Level: Senior</span></p>
+					</div>
+				</div>
+				<div class="member-item">
+					<img src="images/members/member-2.2.jpg" alt="member-2"/>
+					<div class="driver-info">
+						<div class="driver">
+							<h3>Johny Roges</h3>
+						</div>
+						<p>Special Van Driver<span>Skill Level: Senior</span></p>
+					</div>
+				</div>
+				<div class="member-item">
+					<img src="images/members/member-2.3.jpg" alt="member-3"/>
+					<div class="driver-info">
+						<div class="driver">
+							<h3>Altrin Mosea</h3>
+						</div>
+						<p>SUV Driver<span>Skill Level: Expert</span></p>
+					</div>
+				</div>
+				<div class="member-item">
+					<img src="images/members/member-2.4.jpg" alt="member-4"/>
+					<div class="driver-info">
+						<div class="driver">
+							<h3>Luther King</h3>
+						</div>
+						<p>Sedan Driver<span>Skill Level: Expert</span></p>
+					</div>
+				</div>
+			</div>
+		</div><!-- Members Carousel/- -->
+		<!-- We Are Hire -->
+		<div class="we-are-hire pull-right">
+			<a href="#"><img src="images/members/member-2.5.jpg" alt="member-5"/></a>
+			<div class="driver-info">
+				<a href="./contact-us.html"><span>We Are Hiring</span></a>
+			</div>		
+		</div><!-- We Are Hire/- -->
+		<div class="section-padding"></div>
+	</div><!-- Members/-  -->
+	
+	<!-- Counter Style2 -->
+	<div id="counter" class="container-fluid no-padding counter-style2">	
+		<div class="section-padding"></div>
+		<div class="container">
+			<!-- Counter -->
+			<div class="counter">
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="statistics-box">
+						<h3><span>Successful Drives</span></h3>
+						<i class="statistics-icon"><img src="images/icon/car.png" alt="statistics-icon" /></i>
+						<span id="statistics_count-1" data-statistics_percent="1200"></span>
+					</div>						
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="statistics-box">
+						<h3><span>Happy Customers</span></h3>
+						<i class="statistics-icon"><img src="images/icon/thumb-up.png" alt="statistics-icon" /></i>
+						<span id="statistics_count-2" data-statistics_percent="4000"></span>
+					</div>						
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="statistics-box">
+						<h3><span>Talented Drivers</span></h3>
+						<i class="statistics-icon"><img src="images/icon/driver.png" alt="statistics-icon" /></i>
+						<span id="statistics_count-3" data-statistics_percent="50"></span>
+					</div>						
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12">
+					<div class="statistics-box">
+						<h3><span>Cities Covered</span></h3>
+						<i class="statistics-icon"><img src="images/icon/milestone.png" alt="statistics-icon" /></i>
+						<span id="statistics_count-4" data-statistics_percent="18"></span>					
+					</div>						
+				</div>
+			</div><!-- Counter/- -->
+		</div>
+		<div class="section-padding"></div>
+	</div><!-- Counter Style2 /- -->
+	
+	<!-- Vehicle Fleet -->
+	<div id="vehicle-fleet" class="container-fluid no-padding vehicle-fleet">
+		<div class="section-padding"></div>
+		<div class="container">
+			<div class="section-header">
+				<h3>Vehicles In Our Fleet</h3>				
+			</div>
+			<div class="vehicle-tabs">
+				<!-- Nav Tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#wheelchair_cars" role="tab" data-toggle="tab">WheelChair Cars</a></li>
+					<li role="presentation"><a href="#regular_rider" role="tab" data-toggle="tab">Regular Rider</a></li>
+					<li role="presentation"><a href="#special_needs" role="tab" data-toggle="tab">Special Needs</a></li>
+				</ul><!-- Nav Tabs /- -->
+				<!-- Tab Content -->
+				<div class="tab-content">
+					<!-- Tabs -->
+					<div role="tabpanel" class="tab-pane fade in active" id="wheelchair_cars">
+						<div class="col-md-7 vehicle-slider no-padding">
+							<div class="row">
+								<div class="main-slider">
+									<div id="slider-1" class="flexslider">
+										<ul class="slides">
+											<li><img src="images/vehicles-fleet/item-1.jpg" alt="item-1"/></li>
+											<li><img src="images/vehicles-fleet/item-2.jpg" alt="item-2"/></li>
+											<li><img src="images/vehicles-fleet/item-3.jpg" alt="item-3"/></li>
+											<li><img src="images/vehicles-fleet/item-1.jpg" alt="item-1"/></li>					
+										</ul>
+									</div>
+								</div>
+								<div class="thumbnail-slider">
+									<div id="carousel-1" class="flexslider">
+										<ul class="slides">
+											<li><img src="images/vehicles-fleet/thumb-item-1.jpg" alt="item-1"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-2.jpg" alt="item-2"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-3.jpg" alt="item-3"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-2.jpg" alt="item-2"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-1.jpg" alt="item-1"/></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>					
+						<div class="col-md-5 vehicle-detail">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#car_details-1" role="tab" data-toggle="tab">Car Details</a></li>
+							</ul>
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="car_details-1">
+									<div class="tabe-content">
+										<h3>Passenger Capacity <span>2 + 1 Driver</span></h3>
+										<h3>Regular Fare <span>$8 / Mi (Day Travel)</span></h3>
+										<h3>Maximum Speed <span>40Mi / hr - City Limit</span></h3>
+										<h3>Availability <span>Offering Anytime</span></h3>
+										<h3>Contract Details <span><a href="online-booking.html">Contact Now</a></span></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- Tabs /- -->
+					<!-- Tabs -->
+					<div role="tabpanel" class="tab-pane fade" id="regular_rider">
+						<div class="col-md-7 vehicle-slider no-padding">
+							<div class="row">
+								<div class="main-slider">
+									<div id="slider-2" class="flexslider">
+										<ul class="slides">
+											<li><img src="images/vehicles-fleet/item-4.jpg" alt="item-4"/></li>
+											<li><img src="images/vehicles-fleet/item-5.jpg" alt="item-5"/></li>
+											<li><img src="images/vehicles-fleet/item-6.jpg" alt="item-6"/></li>
+											<li><img src="images/vehicles-fleet/item-4.jpg" alt="item-4"/></li>					
+										</ul>
+									</div>
+								</div>
+								<div class="thumbnail-slider">
+									<div id="carousel-2" class="flexslider">
+										<ul class="slides">
+											<li><img src="images/vehicles-fleet/thumb-item-4.jpg" alt="item-4"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-5.jpg" alt="item-5"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-6.jpg" alt="item-6"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-5.jpg" alt="item-5"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-4.jpg" alt="item-4"/></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>					
+						<div class="col-md-5 vehicle-detail">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#car_details-2" role="tab" data-toggle="tab">Car Details</a></li>
+							</ul>
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="car_details-2">
+									<div class="tabe-content">
+										<h3>Passenger Capacity <span>4 + 1 Driver</span></h3>
+										<h3>Regular Fare <span>$6 / Mi (Day Travel)</span></h3>
+										<h3>Maximum Speed <span>55mi / hr - City Limit</span></h3>
+										<h3>Availability <span>Offering Anytime</span></h3>
+										<h3>Contract Details <span><a href="online-booking.html">Contact Now</a></span></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- Tabs /- -->
+					<!-- Tabs -->
+					<div role="tabpanel" class="tab-pane fade" id="special_needs">
+						<div class="col-md-7 vehicle-slider no-padding">
+							<div class="row">
+								<div class="main-slider">
+									<div id="slider-3" class="flexslider">
+										<ul class="slides">
+											<li><img src="images/vehicles-fleet/item-7.jpg" alt="item-7"/></li>
+											<li><img src="images/vehicles-fleet/item-8.jpg" alt="item-8"/></li>
+											<li><img src="images/vehicles-fleet/item-9.jpg" alt="item-9"/></li>
+											<li><img src="images/vehicles-fleet/item-7.jpg" alt="item-7"/></li>					
+										</ul>
+									</div>
+								</div>
+								<div class="thumbnail-slider">
+									<div id="carousel-3" class="flexslider">
+										<ul class="slides">
+											<li><img src="images/vehicles-fleet/thumb-item-7.jpg" alt="item-7"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-8.jpg" alt="item-8"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-9.jpg" alt="item-9"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-8.jpg" alt="item-8"/></li>
+											<li><img src="images/vehicles-fleet/thumb-item-7.jpg" alt="item-7"/></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>					
+						<div class="col-md-5 vehicle-detail">
+							<!-- Nav tabs -->
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#ca5_details-3" role="tab" data-toggle="tab">Car Details</a></li>
+							</ul>
+							<!-- Tab panes -->
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="car_details-3">
+									<div class="tabe-content">
+										<h3>Passenger Capacity <span>6 + 1 Driver</span></h3>
+										<h3>Regular Fare <span>$11 / Mi (Day Travel)</span></h3>
+										<h3>Maximum Speed <span>55Mi / hr - City Limit</span></h3>
+										<h3>Availability <span>Offering Anytime</span></h3>
+										<h3>Contract Details <span><a href="online-booking.html">Contact Now</a></span></h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div><!-- Tabs /- -->	
+				</div><!-- Tab Content /-  -->
+			</div>
+		</div>
+		<div class="section-padding"></div>	
+	</div><!-- - Vehicle Fleet /-  -->
+	
+	<!-- Partner -->
+	<div id="partner" class="container-fluid no-padding partner">
+		<div class="section-padding"></div>
+		<div class="container">
+			<div class="section-header">
+				<h3>Our Partners</h3>				
+			</div>
+			<div class="partner-carousel">
+				<div class="col-md-12">
+					<img src="images/partner/partner-1.png" alt="partner-1"/>
+				</div>
+				<div class="col-md-12">
+					<img src="images/partner/partner-2.png" alt="partner-2"/>
+				</div>
+				<div class="col-md-12">
+					<img src="images/partner/partner-3.png" alt="partner-3"/>
+				</div>
+				<div class="col-md-12">
+					<img src="images/partner/partner-4.png" alt="partner-4"/>
+				</div>
+				<div class="col-md-12">
+					<img src="images/partner/partner-5.png" alt="partner-5"/>
+				</div>
+				<div class="col-md-12">
+					<img src="images/partner/partner-6.png" alt="partner-6"/>
+				</div>
+			</div>
+		</div>
+		<div class="section-padding"></div>
+	</div><!-- Partner /- -->
 
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
+	<footer class="footer-main">
+		<!-- Container -->
+		<div class="container">			
+			
+			<div class="col-md-4 col-sm-6">
+				<aside class="widget widget-links">
+					<h3 class="widget-title">We Glad To Offer</h3>
+					<ul>
+						<li><a href="#">24 / 7 Transport Service To the Partbers Hospitals</a></li>
+						<li><a href="#">Instant Printed Bills In Car On Departure</a></li>
+						<li><a href="#">Magazine And News Papers For Reading On Ride</a></li>
+						<li><a href="#">Credit And Debit Card Payment Available</a></li>
+					</ul>
+				</aside>
+			</div>			
+			<div class="col-md-4 col-sm-6">
+				<aside class="widget widget-about">
+					<h3 class="widget-title">about Us</h3>
+					<p>Since 2019, we’ve provided compassionate, safe and timely transport. With a large fleet of vehicles and a
+						rigorously trained staff, we ensure reliable rides and can assist any passenger — no matter what
+						disabilities, special needs or challenges they face. We take great pride in every element of our work to
+						best assist those in need.</p>
+					<ul>
+						<li><img src="images/icon/ftr-location.png" alt="Address" />500 W Cummings Park - Suite 1850 <span>Woburn, Ma - 01801</span></li>
+						<li><img src="images/icon/ftr-customer.png" alt="Phone" /> Customer Support : <span>1800-RIDE-HostTrans</span></li>
+						<li><img src="images/icon/ftr-email.png" alt="E-Mail" /><span>Email :</span><a href="mailto:rlima@atriumproductions.net"> mail@HostTrans.com</a></li>
+					</ul>
+				</aside>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<aside class="widget widget-logo">
+						<img src="./images/HostTrans Logo.png" alt="Logo" />
+				</aside>
+			</div>
+		</div><!-- Container /- -->
+		<div class="bottom-footer container-fluid no-padding">
+			<div class="container">
+				<div class="col-md-7 pull-right">
+					<p class="copyright">copyrights &copy; 2020 Rubinho, Naima, Pinar - HostTrans Special Tranport Services. All rights reserved</p>
+				</div>
+			</div>
+		</div>
+	</footer>
+		
+	</div><!-- Main Container -->
+	<!-- JQuery v1.11.3 -->
+	<script src="js/jquery.min.js"></script>
 
-                </ul>
-            </div>
-        </div>
-    </nav>
+	<!-- Library - Modernizer -->
+	<script src="libraries/modernizr/modernizr.js"></script>
+	
+	<!-- Library - Bootstrap v3.3.5 -->
+	<script src="libraries/bootstrap/bootstrap.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+	<script src="libraries/bootstrap/bootstrap-datetimepicker.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+	
+	<!-- jQuery Easing v1.3 -->
+	<script src="js/jquery.easing.min.js"></script>
 
-    <header class="v-header container">
-        <div class="fullscreen-video-wrap">
-            <!--  https://www.videvo.net/video/typing-on-computer-white-bg/4475/ -->
-            <!-- DO NOT USE THIS VIDEO, I JUST NEEDED A HOSTED VIDEO FOR THIS CODEPEN> USE THE ONE ABOVE -->
-            <video autoplay muted loop playsinline src="https://swarmify.com/demo_video.mp4"></video>
+	<!-- Library - jQuery.appear -->
+	<script src="libraries/appear/jquery.appear.js"></script>
+	
+	<!-- Library - OWL Carousel V.2.0 beta -->
+	<script src="libraries/owl-carousel/owl.carousel.min.js"></script>
+	
+	<!-- jQuery For Number Counter -->	
+	<script src="libraries/number/jquery.animateNumber.min.js"></script>
 
-        </div>
-
-    </header>
-
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="img/paratransit-van.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="img/way2go2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="img/special-needs-van.jpg" class="d-block w-100" alt="...">
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 text-left ">
-                <p>Since 2000, we’ve provided compassionate, safe and timely transport. With a large fleet of vehicles
-                    and
-                    rigorously trained staff, we ensure reliable rides and can assist any passenger no matter what
-                    disabilities, special needs or challenges they face. We take great pride in every element of our
-                    work to
-                    best assist those in need.</p>
-            </div>
-            <div class="col-lg-6 text-left">
-                <p> We partner with healthcare facilities to provide consistent, reliable transportation for
-                    non-emergency
-                    patients. At Express Medical Transporters, we have invested in a large staff of highly-qualified and
-                    well-trained FSRs. Their professionalism combined with a large, reliable and fully-equipped fleet of
-                    vehicles ensures our ability to transport any non-emergency patient, handle any volume of rides and
-                    keep
-                    wait times to a minimum.</p>
-            </div>
-        </div>
-    </div>
-    <!--  <section class="section section-a">
-        <div class="container">
-            <h2>Timely and Safe Transport</h2>
-            <p>Since 2000, we’ve provided compassionate, safe and timely transport. With a large fleet of vehicles and a
-                rigorously trained staff, we ensure reliable rides and can assist any passenger — no matter what
-                disabilities, special needs or challenges they face. We take great pride in every element of our work to
-                best assist those in need.</p>
-        </div>
-    </section>-->
-
-    <!-- <section class="section section-b">
-        <div class="container">
-            <h2>Healtcare Providers</h2>
-            <p>We partner with healthcare facilities to provide consistent, reliable transportation for non-emergency
-                patients. At Express Medical Transporters, we have invested in a large staff of highly-qualified and
-                well-trained FSRs. Their professionalism combined with a large, reliable and fully-equipped fleet of
-                vehicles ensures our ability to transport any non-emergency patient, handle any volume of rides and keep
-                wait times to a minimum.</p>
-        </div>
-    </section>-->
-
-
-
-
-    <!-- Footer -->
-    <footer class="page-footer font-small  pt-4">
-
-        <!-- Footer Links -->
-        <div class="container-fluid text-center text-md-left">
-
-            <!-- Grid row -->
-            <div class="row">
-
-                <!-- Grid column -->
-                <div class="col-md-6 mt-md-0 mt-3">
-
-                    <!-- Content -->
-                    <h5 class="text-secondary">Need a ride?</h5>
-                    <p>
-                        We are available 24/7. Give us a call at
-                        1-844-RIDE-HostTrans (1-844-743-5896)</p>
-
-                </div>
-                <!-- Grid column -->
-
-                <hr class="clearfix w-100 d-md-none pb-3">
-
-
-
-                <!-- Grid column -->
-                <div class="col-md-3 mb-md-0 mb-3">
-
-                    <!-- Links -->
-                    <h5 class="text-secondary">HostTrans</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#!">Why HostTrans</a>
-                        </li>
-                        <li>
-                            <a href="#!">Cities
-                        </li>
-                        <li>
-                            <a href="#!">Fare Estimate</a>
-                        </li>
-                        <li>
-                            <a href="#!">Help</a>
-                        </li>
-
-
-                    </ul>
-
-                </div>
-
-                <!-- Links -->
-
-                <div class="col-md-3 mb-md-0 mb-3">
-                    <h5 class="text-secondary">Ride</h5>
-
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="signup.html">Sign up to Ride</a>
-                        </li>
-                        <li>
-                            <a href="signin.html">Sign in to Ride</a>
-                        </li>
-                        <li>
-                            <a href="ride.html">Ride</a>
-                        </li>
-                        <li>
-                            <a href="safety.html">Safety</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                    <!-- Grid column -->
-                </div>
-            </div>
-            <!-- Grid row -->
-
-        </div>
-        <!-- Footer Links -->
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright
-
-        </div>
-        <!-- Copyright -->
-
-    </footer>
-    <!-- Footer -->
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+	<!-- Library - FlexSlider v2.5.0 -->
+	<script defer src="libraries/flexslider/jquery.flexslider.js"></script>
+	
+	<!-- Library - Functions JS -->
+	<script src="js/functions.js"></script>
 </body>
-
-</html>
+</html>	

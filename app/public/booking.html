@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HostTrans - Hospital Special Company</title>
+
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/HostTrans Logo-fav.png" />
+
+    <!-- For iPhone 4 Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images//apple-touch-icon-114x114-precomposed.png">
+
+    <!-- For iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images//apple-touch-icon-72x72-precomposed.png">
+
+    <!-- For iPhone: -->
+    <link rel="apple-touch-icon-precomposed" href="images//apple-touch-icon-57x57-precomposed.png">
+
+    <!-- Library - Loader CSS -->
+    <link rel="stylesheet" type="text/css" href="libraries/loader/loaders.min.css">
+
+    <!-- Library - Google Font Familys -->
+    <link
+        href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Lato:400,100italic,100,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+
+    <!-- Library - Bootstrap v3.3.5 -->
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap-datetimepicker.min.css">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" type="text/css" href="libraries/fonts/font-awesome.min.css">
+
+    <!-- Library - OWL Carousel V.2.0 beta -->
+    <link rel="stylesheet" type="text/css" href="libraries/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="libraries/owl-carousel/owl.theme.css">
+
+    <!-- Library - FlexSlider v2.5.0 -->
+    <link rel="stylesheet" type="text/css" href="libraries/flexslider/flexslider.css">
+
+    <!-- Library - Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="libraries/animate/animate.min.css">
+
+    <!-- Custom - Common CSS -->
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
+
+    <!-- Custom - Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/shortcodes.css">
+
+
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+
+        #map {
+            height: 50%;
+            width: 41%;
+            float: left;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: 18.5%;
+            border-style: solid;
+            border-width: 7px;
+        }
+
+        #result {
+            margin: auto;
+            margin-bottom: 4%;
+        }
+
+        #back_routes {
+            background-image: url("./images/back/781264.jpg");
+
+        }
+
+        #distance_form {
+            margin-top: 35px;
+            margin-bottom: 30px;
+            margin-left: 15px;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+
+</head>
+
+<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+    <a id="top"></a>
+    <div class="main-container"></div>
+    <header class="header-main">
+        <div class="top-header container-fluid no-padding">
+            <!-- Container -->
+            <div class="container">
+                <div class="col-md-8 pull-right top-menu">
+                    <ul class="no-bottom-margin">
+                        <li><a href="signin.html">Sign In</a></li>
+                    </ul>
+                </div>
+            </div><!-- Container /- -->
+        </div><!-- Top Header /- -->
+        <nav class="navbar ow-navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <div class="navbar-brand" id="logo_navbar">
+                        <a href="home.html">
+                            <img src="./images/HostTrans Logo-80.png" alt="Logo" style="margin-top: -21px;" />
+                        </a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="safety.html">Safety</a></li>
+                        <li><a href="faq.html">Faq</a></li>
+                        <li><a href="contact-us.html">Contact US</a></li>
+                    </ul>
+                </div>
+                <a href="#">Book For A Ride</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Banner Section -->
+	<div id="page-banner" class="page-banner faq-banner container-fluid no-padding">
+		<div class="page-heading">
+			<h3>Booking a Car</h3>
+			<ol class="breadcrumb">
+				<li><a href="home.html">Home</a></li>
+				<li class="active"><a href="#">Booking</a></li>
+			</ol>
+		</div>
+	</div><!-- Banner Section /- -->
+	
+    </div>
+    <!--The div elements for the map and message -->
+    <div id="map"></div>
+    <div id="msg"></div>
+    <div id="back_routes">
+        <div class="container">
+
+            <div class="row">
+                <!-- <h1>Calculate the distance between two adresses</h1> -->
+                <div class="col-md-4">
+                    <form id="distance_form">
+
+                        <div class="form-group">
+                            <label>Car Type:</label>
+                            <select class="form-control" id="car_type">
+                                <option>Select The Car Type</option>
+                                <option>WheelChair Car</option>
+                                <option>Regular</option>
+                                <option>Special Needs</option>
+
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Passengers:</label>
+                            <select class="form-control">
+                                <option>Enter The Number of Passengers</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Origin:</label>
+                            <input class="form-control" id="from_places" placeholder="Enter a Origin Location" />
+                            <input type="hidden" id="origin" name="origin" required />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Destination:</label>
+                            <input class="form-control" id="to_places" placeholder="Enter a Destination Location" />
+                            <input type="hidden" id="destination" name="destination" required />
+                        </div>
+
+                        <input id="submit_route" type="submit" value="Calculate" class="btn btn-primary" />
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div id="result" class="col-md-6">
+                    <ul id="result">
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Distance in Miles:
+                            <span id="in_Mile" class="badge badge-primary badge-pill"></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">In Minutes:
+                            <span id="duration_value" class="badge badge-primary badge-pill"></span></li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Rate:
+                            <span id="rate" class="badge badge-primary badge-pill"></span></li>
+                    </ul>
+                    <input id="submit_payment" type="submit" value="Book Your Car" class="btn btn-primary" />
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-main">
+        <!-- Container -->
+        <div class="container">
+
+            <div class="col-md-4 col-sm-6">
+                <aside class="widget widget-links">
+                    <h3 class="widget-title">We Glad To Offer</h3>
+                    <ul>
+                        <li><a href="#">24 / 7 Transport Service To the Partbers Hospitals</a></li>
+                        <li><a href="#">Instant Printed Bills In Car On Departure</a></li>
+                        <li><a href="#">Magazine And News Papers For Reading On Ride</a></li>
+                        <li><a href="#">Credit And Debit Card Payment Available</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <aside class="widget widget-about">
+                    <h3 class="widget-title">about Us</h3>
+                    <p>Since 2019, we’ve provided compassionate, safe and timely transport. With a large fleet of
+                        vehicles and a
+                        rigorously trained staff, we ensure reliable rides and can assist any passenger — no matter
+                        what
+                        disabilities, special needs or challenges they face. We take great pride in every element of
+                        our work to
+                        best assist those in need.</p>
+                    <ul>
+                        <li><img src="images/icon/ftr-location.png" alt="Address" />500 W Cummings Park - Suite 1850
+                            <span>Woburn, Ma - 01801</span></li>
+                        <li><img src="images/icon/ftr-customer.png" alt="Phone" /> Customer Support :
+                            <span>1800-RIDE-HostTrans</span></li>
+                        <li><img src="images/icon/ftr-email.png" alt="E-Mail" /><span>Email :</span><a
+                                href="mailto:rlima@atriumproductions.net"> mail@HostTrans.com</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <aside class="widget widget-logo">
+                    <img src="./images/HostTrans Logo.png" alt="Logo" />
+                </aside>
+            </div>
+        </div><!-- Container /- -->
+        <div class="bottom-footer container-fluid no-padding">
+            <div class="container">
+                <div class="col-md-7 pull-right">
+                    <p class="copyright">copyrights &copy; 2020 Rubinho, Naima, Pinar - HostTrans Special Tranport
+                        Services. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize and add the map
+        var map;
+        var placeA;
+        var placeB;
+        var mk1;
+        var mk2;
+        var distance;
+
+
+        function haversine_distance(mk1, mk2) {
+            var R = 3958.8; // Radius of the Earth in miles
+            var rlat1 = mk1.position.lat() * (Math.PI / 180); // Convert degrees to radians
+            var rlat2 = mk2.position.lat() * (Math.PI / 180); // Convert degrees to radians
+            var difflat = rlat2 - rlat1; // Radian difference (latitudes)
+            var difflon = (mk2.position.lng() - mk1.position.lng()) * (Math.PI / 180); // Radian difference (longitudes)
+
+            var d = 2 * R * Math.asin(Math.sqrt(Math.sin(difflat / 2) * Math.sin(difflat / 2) + Math.cos(rlat1) * Math.cos(rlat2) * Math.sin(difflon / 2) * Math.sin(difflon / 2)));
+            return d;
+        }
+
+
+        function initMap() {
+            // The map, centered on Central Park
+            var center = { lat: 42.3601, lng: -71.0589 };
+            var options = { zoom: 15, scaleControl: true, center: center };
+
+            map = new google.maps.Map(
+                document.getElementById('map'), options);
+
+            // Locations of landmarks
+            google.maps.event.addDomListener(window, 'load', function () {
+
+                var from_places = new google.maps.places.Autocomplete(document.getElementById('from_places'));
+                google.maps.event.addListener(from_places, 'place_changed', function () {
+                    var places = from_places.getPlace();
+                    var address = places.formatted_address;
+                    var lat = parseFloat(places.geometry.location.lat());
+                    var lng = parseFloat(places.geometry.location.lng());
+                    placeA = { lat, lng }
+                    bounds = new google.maps.LatLngBounds();
+                    mk1 = new google.maps.Marker({
+                        position: placeA,
+                        //animation: google.maps.Animation.DROP,
+                        //draggable: true,
+                        map: map,
+                        zoom: 10
+                    });
+                    loc = new google.maps.LatLng(mk1.position.lat(), mk1.position.lng());
+                    bounds.extend(loc);
+                    map.fitBounds(bounds);
+                    map.panToBounds(bounds);
+                });
+
+                var to_places = new google.maps.places.Autocomplete(document.getElementById('to_places'));
+                google.maps.event.addListener(to_places, 'place_changed', function () {
+                    var places = to_places.getPlace();
+                    var address = places.formatted_address;
+                    var lat = parseFloat(places.geometry.location.lat());
+                    var lng = parseFloat(places.geometry.location.lng());
+                    placeB = { lat, lng }
+                    mk2 = new google.maps.Marker({
+                        position: placeB,
+                        //animation: google.maps.Animation.DROP,
+                        //draggable: true,
+                        map: map,
+                        //zoom: 10
+                    });
+
+                });
+            });
+
+
+            let directionsService = new google.maps.DirectionsService();
+            let directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map); // Existing map object displays directions
+
+            // // Create route from existing points used for markers
+            function create_route() {
+                const route = {
+                    origin: placeA,
+                    destination: placeB,
+                    travelMode: 'DRIVING'
+                }
+
+                directionsService.route(route,
+                    function (response, status) { // anonymous function to capture directions
+                        if (status !== 'OK') {
+                            window.alert('Directions request failed due to ' + status);
+                            return;
+                        } else {
+                            directionsRenderer.setDirections(response); // Add route to the map
+                            var directionsData = response.routes[0].legs[0]; // Get data about the mapped route
+                            if (!directionsData) {
+                                window.alert('Directions request failed');
+                                return;
+                            }
+                            else {
+
+                                var total_ride = 0
+                                var car_type_a = document.getElementById('car_type').options.selectedIndex;
+
+                                if (car_type_a === 1) {
+                                    total_ride = parseFloat(directionsData.distance.text, 2) * 8
+                                } else if (car_type_a === 2) {
+                                    total_ride = parseFloat(directionsData.distance.text, 2) * 6
+                                } else {
+                                    total_ride = parseFloat(directionsData.distance.text, 2) * 11
+                                };
+                                var formatter = new Intl.NumberFormat('en-US', {
+                                    style: 'currency',
+                                    currency: 'USD',
+                                    minimumFractionDigits: 2,
+                                });
+
+                                document.getElementById('in_Mile').innerHTML += directionsData.distance.text;
+                                document.getElementById('duration_value').innerHTML += directionsData.duration.text;
+                                document.getElementById('rate').innerHTML += 'US' + formatter.format(total_ride);
+                            }
+                        }
+                    });
+            };
+
+            $("#submit_route").click((e) => {
+                e.preventDefault();
+                create_route();
+            })
+        }
+
+
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    </script>
+    <!-- JQuery v1.11.3 -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Library - Modernizer -->
+    <script src="libraries/modernizr/modernizr.js"></script>
+
+    <!-- Library - Bootstrap v3.3.5 -->
+    <script src="libraries/bootstrap/bootstrap.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+    <script src="libraries/bootstrap/bootstrap-datetimepicker.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+
+    <!-- jQuery Easing v1.3 -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Library - jQuery.appear -->
+    <script src="libraries/appear/jquery.appear.js"></script>
+
+    <!-- Library - OWL Carousel V.2.0 beta -->
+    <script src="libraries/owl-carousel/owl.carousel.min.js"></script>
+
+    <!-- jQuery For Number Counter -->
+    <script src="libraries/number/jquery.animateNumber.min.js"></script>
+
+    <!-- Library - Google Map API -->
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyASOoy7K9T8QyeA6QysbWUd5-E54b9ZmkU&callback=initMap">
+        </script>
+
+    <!-- Library - FlexSlider v2.5.0 -->
+    <script defer src="libraries/flexslider/jquery.flexslider.js"></script>
+
+    <!-- Library - Functions JS -->
+    <script src="js/functions.js"></script>
+
+    <!-- Library -  JS -->
+
+
+
+</body>
+
+</html>

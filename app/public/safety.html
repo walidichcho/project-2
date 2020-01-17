@@ -1,104 +1,271 @@
 <!DOCTYPE html>
-<html lang='en-us'>
 
 <head>
+    <meta charset="utf-8">
 
-    <!-- <meta http-equiv="refresh" content="5" /> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta charset="UTF-8">
-    <title>Hospital Transportation</title>
+    <title>HostTrans - Hospital Special Company</title>
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/HostTrans Logo-fav.png" />
 
-    <!-- jQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!-- For iPhone 4 Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images//apple-touch-icon-114x114-precomposed.png">
 
-    <!-- Moment.js -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js"></script>
+    <!-- For iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images//apple-touch-icon-72x72-precomposed.png">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Shrikhand" rel="stylesheet">
+    <!-- For iPhone: -->
+    <link rel="apple-touch-icon-precomposed" href="images//apple-touch-icon-57x57-precomposed.png">
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Library - Loader CSS -->
+    <link rel="stylesheet" type="text/css" href="libraries/loader/loaders.min.css">
 
+    <!-- Library - Google Font Familys -->
+    <link
+        href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Lato:400,100italic,100,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+
+    <!-- Library - Bootstrap v3.3.5 -->
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap-datetimepicker.min.css">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" type="text/css" href="libraries/fonts/font-awesome.min.css">
+
+    <!-- Library - OWL Carousel V.2.0 beta -->
+    <link rel="stylesheet" type="text/css" href="libraries/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="libraries/owl-carousel/owl.theme.css">
+
+    <!-- Library - FlexSlider v2.5.0 -->
+    <link rel="stylesheet" type="text/css" href="libraries/flexslider/flexslider.css">
+
+    <!-- Library - Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="libraries/animate/animate.min.css">
+
+    <!-- Custom - Common CSS -->
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
+
+    <!-- Custom - Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/shortcodes.css">
 
 </head>
-<!-- class="container-fluid bg-info" -->
 
-<body>
-    <!-- // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-  // SECTION B.2. - MAP: Search Criteria
-  // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-    <!--<nav class="navbar navbar-expand-lg my-nav" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="home.html">Host<span>Trans</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="home.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="ride.html" class="nav-link">Ride</a></li>
-                    <li class="nav-item"><a href="safety.html" class="nav-link">Safety</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-                </ul>
+<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+    
+    <a id="top"></a>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header-main">
+            <!-- Top Header -->
+            <div class="top-header container-fluid no-padding">
+                <!-- Container -->
+                <div class="container">
+                    <div class="col-md-8 pull-right top-menu">
+                        <ul class="no-bottom-margin">
+                            <li><a href="signin.html">Sign In</a></li>
+                        </ul>
+                    </div>
+                </div><!-- Container /- -->
+            </div><!-- Top Header /- -->
+
+            
+            <nav class="navbar ow-navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <div class="navbar-brand" id="logo_navbar">
+							<a href="home.html">
+								<img src="./images/HostTrans Logo-80.png" alt="Logo" style="margin-top: -21px;" />
+							</a>
+						</div>
+                        <ul class="nav navbar-nav">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="safety.html">Safety</a></li>
+                            <li><a href="faq.html">Faq</a></li>
+                            <li><a href="contact-us.html">Contact US</a></li>
+                        </ul>
+                    </div>
+                    <a href="booking.html">Book For A Ride</a>
+                </div>
+            </nav>
+        </header><!-- Header /- -->
+        <!-- Banner Section -->
+        <div id="page-banner" class="page-banner faq-banner container-fluid no-padding">
+            <div class="page-heading">
+                <h3>Safety</h3>
+                <ol class="breadcrumb">
+                    <li><a href="home.html">Home</a></li>
+                    <li class="active"><a href="#">Safety</a></li>
+                </ol>
             </div>
-        </div>
-    </nav>-->
+        </div><!-- Banner Section /- -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-        <div class="container">
-            <a class="navbar-brand" href="home.html">Host<span>Trans</span></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
-            </button>
-
-            <div class="collapse navbar-collapse" id="ftco-nav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="home.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="ride.html" class="nav-link">Ride</a></li>
-                    <li class="nav-item"><a href="safety.html" class="nav-link">Safety</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                    <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-                </ul>
+        <!-- Container -->
+        <div class="container-fluid no-padding what-we-do">
+            <div class="section-padding"></div>
+            <div class="image-box">
+                <img src="./images/services/service-1_a.jpg" alt="service" />
             </div>
-        </div>
-    </nav>
-
-
-
-
-
-    <div class="container-fluid">
-
-        <div id="safety" class="row">
-            <!--   <div class="col-md-8"></div> -->
-            <!-- <div class="col-md-4"> -->
-
-            <div class="col-md-5">
-                <h1>Our approach to safety</h1>
-
-
-                <h5>We recognize that every time you open your HostTrans app, you're putting your trust in our
-                    technology—to
-                    not only connect you with a driver, but to also give you tools in case of emergency. That trust is
-                    what drives us to continuously raise the bar, building new safety features, setting guidelines for
-                    respectful and positive experiences, and more.
-                    Whether you’re a rider, driver, or anyone who uses HostTrans, your safety drives us.
-                </h5>
-
-
+            <div class="container">
+                <div class="col-md-8 pull-right">
+                    <div class="col-md-12 col-sm-6">
+                        <div class="about">
+                            <h3>Our Approach</h3>
+                            <h2>To Safety</h2>
+                            <p>We recognize that every time you open your HostTrans app, you're putting your trust in
+                                our
+                                technology.</p>
+                            <p>to not only connect you with a driver, but to also give you tools in case of emergency.
+                                That trust is
+                                what drives us to continuously raise the bar, building new safety features, setting
+                                guidelines for
+                                respectful and positive experiences, and more. Whether you’re a rider, driver, or anyone
+                                who uses HostTrans, your safety drives us. </p>
+                            <a href="./about.html" title="Know More">Know More</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-7" id="safety-dir"></div>
-        </div>
-    </div>
 
 
+            <!-- Partner -->
+            <div id="partner" class="container-fluid no-padding partner">
+                <div class="section-padding"></div>
+                <div class="container">
+                    <div class="section-header">
+                        <h3>Our Partners</h3>
+                    </div>
+                    <div class="partner-carousel">
+                        <div class="col-md-12">
+                            <img src="images/partner/partner-1.png" alt="partner-1" />
+                        </div>
+                        <div class="col-md-12">
+                            <img src="images/partner/partner-2.png" alt="partner-2" />
+                        </div>
+                        <div class="col-md-12">
+                            <img src="images/partner/partner-3.png" alt="partner-3" />
+                        </div>
+                        <div class="col-md-12">
+                            <img src="images/partner/partner-4.png" alt="partner-4" />
+                        </div>
+                        <div class="col-md-12">
+                            <img src="images/partner/partner-5.png" alt="partner-5" />
+                        </div>
+                        <div class="col-md-12">
+                            <img src="images/partner/partner-6.png" alt="partner-6" />
+                        </div>
+                    </div>
+                </div>
+                <div class="section-padding"></div>
+            </div><!-- Partner /- -->
+
+            <footer class="footer-main">
+                <!-- Container -->
+                <div class="container">
+
+                    <div class="col-md-4 col-sm-6">
+                        <aside class="widget widget-links">
+                            <h3 class="widget-title">We Glad To Offer</h3>
+                            <ul>
+                                <li><a href="#">24 / 7 Transport Service To the Partbers Hospitals</a></li>
+                                <li><a href="#">Instant Printed Bills In Car On Departure</a></li>
+                                <li><a href="#">Magazine And News Papers For Reading On Ride</a></li>
+                                <li><a href="#">Credit And Debit Card Payment Available</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <aside class="widget widget-about">
+                            <h3 class="widget-title">about Us</h3>
+                            <p>Since 2019, we’ve provided compassionate, safe and timely transport. With a large fleet
+                                of vehicles and a
+                                rigorously trained staff, we ensure reliable rides and can assist any passenger — no
+                                matter what
+                                disabilities, special needs or challenges they face. We take great pride in every
+                                element of our work to
+                                best assist those in need.</p>
+                            <ul>
+                                <li><img src="images/icon/ftr-location.png" alt="Address" />500 W Cummings Park - Suite
+                                    1850 <span>Woburn, Ma - 01801</span></li>
+                                <li><img src="images/icon/ftr-customer.png" alt="Phone" /> Customer Support :
+                                    <span>1800-RIDE-HostTrans</span></li>
+                                <li><img src="images/icon/ftr-email.png" alt="E-Mail" /><span>Email :</span><a
+                                        href="mailto:rlima@atriumproductions.net"> mail@HostTrans.com</a></li>
+                            </ul>
+                        </aside>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <aside class="widget widget-logo">
+                            <img src="./images/HostTrans Logo.png" alt="Logo" />
+                        </aside>
+                    </div>
+                </div><!-- Container /- -->
+                <div class="bottom-footer container-fluid no-padding">
+                    <div class="container">
+                        <div class="col-md-7 pull-right">
+                            <p class="copyright">copyrights &copy; 2020 Rubinho, Naima, Pinar - HostTrans Special
+                                Tranport Services. All rights reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div><!-- Main Container -->
+        <!-- JQuery v1.11.3 -->
+        <script src="js/jquery.min.js"></script>
+
+        <!-- Library - Modernizer -->
+        <script src="libraries/modernizr/modernizr.js"></script>
+
+        <!-- Library - Bootstrap v3.3.5 -->
+        <script src="libraries/bootstrap/bootstrap.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+        <script src="libraries/bootstrap/bootstrap-datetimepicker.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+
+        <!-- jQuery Easing v1.3 -->
+        <script src="js/jquery.easing.min.js"></script>
+
+        <!-- Library - jQuery.appear -->
+        <script src="libraries/appear/jquery.appear.js"></script>
+
+        <!-- Library - OWL Carousel V.2.0 beta -->
+        <script src="libraries/owl-carousel/owl.carousel.min.js"></script>
+
+        <!-- jQuery For Number Counter -->
+        <script src="libraries/number/jquery.animateNumber.min.js"></script>
+
+        <!-- Library - Google Map API -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+
+        <!-- Library - FlexSlider v2.5.0 -->
+        <script defer src="libraries/flexslider/jquery.flexslider.js"></script>
+
+        <!-- Library - Functions JS -->
+        <script src="js/functions.js"></script>
 </body>
 
 </html>

@@ -63,91 +63,10 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="css/shortcodes.css">
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #fff;
-            background-image: url('./images/back/781252.jpg');
-            background-size: cover;
-        }
-
-        .signin {
-            background: rgba(44, 62, 80, 0.7);
-            padding: 40px;
-            width: 350px;
-            margin: auto;
-            margin-top: 80px;
-            height: 500px;
-            margin-left: 500px;
-            margin: 0 auto;
-            margin-top: 5%;
-            margin-bottom: 5%;
-
-        }
-
-        form {
-            width: 240px;
-            text-align: center;
-        }
-
-        input {
-            width: 240px;
-            text-align: center;
-            background: transparent;
-            border: none;
-            border-bottom: 1px solid #fff;
-            font-family: "Play", sans-serif;
-            font-size: 16px;
-            font-weight: 200px;
-            padding: 10px 0;
-            transition: border 0.5s;
-            outline: none;
-            color: #fff;
-
-        }
-
-        input[type=button] {
-            border: none;
-            width: 190px;
-            background: white;
-            color: #000;
-            font-size: 16px;
-            line-height: 25px;
-            padding: 10 px 0;
-            border-radius: 15px;
-            cursor: pointer;
-        }
-
-        input[type=button]:hover {
-            color: #fff;
-            background-color: black;
-
-        }
-
-        h2 {
-            color: white;
-        }
-
-        a {
-            color: yellow;
-            text-decoration: blink;
-        }
-
-        a:hover {
-            color: skyblue;
-
-        }
-
-
-        ::placeholder {
-            color: aliceblue;
-            opacity: 0.8;
-        }
-    </style>
-
 </head>
 
 <body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
+
 
     <a id="top"></a>
     <!-- Main Container -->
@@ -195,30 +114,78 @@
                 </div>
             </nav>
         </header><!-- Header /- -->
+        <div id="contact_body">
+            <!-- Banner Section -->
+            <div id="page-banner" class="page-banner faq-banner container-fluid no-padding">
+                <div class="page-heading">
+                    <h3>Contact Us</h3>
+                    <ol class="breadcrumb">
+                        <li><a href="home.html">Home</a></li>
+                        <li class="active"><a href="#">Contact Us</a></li>
+                    </ol>
+                </div>
+            </div><!-- Banner Section /- -->
 
 
-        <!-- Sign-in Card-->
+            <div id="contact_form">
+                <div id="main" class="row"></div>
+                <section class="contact-section">
+                    <div class="container">
+                        <div class="row d-flex mb-5 contact-info justify-content-center">
+                            <div id="contact_cont" class="col-md-8">
+                                <div class="row mb-5">
+                                    <div class="col-md-4 text-center py-4">
+                                        <div class="icon">
+                                            <i class='far fa-map'></i>
+                                        </div>
+                                        <p><span>Address:</span> 500 W Cummings Park, Suite 1850 Woburn MA 01801</p>
+                                    </div>
+                                    <div class="col-md-4 text-center border-height py-4">
+                                        <div class="icon">
+                                            <i class='fas fa-phone'></i>
+                                        </div>
+                                        <p><span>Phone:</span> <a>1 800-RIDE-HostTrans</a></p>
+                                    </div>
+                                    <div class="col-md-4 text-center py-4">
+                                        <div class="icon">
+                                            <i class='fas fa-envelope'></i>
+                                        </div>
+                                        <p><span>Email:</span> <a>mail@HostTrans.com</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row block-9 justify-content-center mb-5">
+                            <div class="col-md-8 mb-md-5">
+                                <h2 class="text-center">If you got any questions <br>please do not hesitate to send us a
+                                    message
+                                </h2>
+                                <form action="#" class="bg-light p-5 contact-form">
+                                    <div class="form-group">
+                                        <input type="text" id="name" class="form-control" placeholder="Your Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="email" class="form-control" placeholder="Your Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" id="subject" class="form-control" placeholder="Subject">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="" id="message" cols="30" rows="7" class="form-control"
+                                            placeholder="Message"></textarea>
+                                    </div>
+                                    <div id="sub_contact" class="text-right">
+                                        <button type="submit" class="btn btn-primary btn-md" id="add-btn">
+                                            <span class="fa fa-fire"></span> Send</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
 
-        <div class="signin">
-            <form>
-                <h2 style="color:white">Log In</h2>
-                <input type="text" name="email" id="Email" placeholder="Email">
-                <input type="password" name="pass" id="Pass" placeholder="Password"><br><br>
-                <a href=""><input type="button" id="login_button" value="Log In"></a><br><br>
-                <div id="container">
-                    <a href="#" style="margin-right:0px; font-size: 13px;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Reset
-                        Password</a>
-                    <a href="#" style="margin-right:0px; font-size: 13px;
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Forgot
-                        Password</a>
-                    <br><br>
-                </div>Don't have an account?<a href="signup.html">&nbsp;Sign Up</a>
-            </form>
-
-
+                </section>
+            </div>
         </div>
-
         <footer class="footer-main">
             <!-- Container -->
             <div class="container">
@@ -237,16 +204,16 @@
                 <div class="col-md-4 col-sm-6">
                     <aside class="widget widget-about">
                         <h3 class="widget-title">about Us</h3>
-                        <p>Since 2019, we’ve provided compassionate, safe and timely transport. With a large fleet
-                            of vehicles and a
+                        <p>Since 2019, we’ve provided compassionate, safe and timely transport. With a large
+                            fleet of vehicles and a
                             rigorously trained staff, we ensure reliable rides and can assist any passenger — no
                             matter what
                             disabilities, special needs or challenges they face. We take great pride in every
                             element of our work to
                             best assist those in need.</p>
                         <ul>
-                            <li><img src="images/icon/ftr-location.png" alt="Address" />500 W Cummings Park - Suite
-                                1850 <span>Woburn, Ma - 01801</span></li>
+                            <li><img src="images/icon/ftr-location.png" alt="Address" />500 W Cummings Park -
+                                Suite 1850 <span>Woburn, Ma - 01801</span></li>
                             <li><img src="images/icon/ftr-customer.png" alt="Phone" /> Customer Support :
                                 <span>1800-RIDE-HostTrans</span></li>
                             <li><img src="images/icon/ftr-email.png" alt="E-Mail" /><span>Email :</span><a
@@ -270,71 +237,40 @@
             </div>
         </footer>
 
-    </div><!-- Main Container -->
-    <!-- JQuery v1.11.3 -->
-    <script src="js/jquery.min.js"></script>
+        <//div>!-- Main Container -->
+        <!-- JQuery v1.11.3 -->
+        <script src="js/jquery.min.js"></script>
 
-    <!-- Library - Modernizer -->
-    <script src="libraries/modernizr/modernizr.js"></script>
+        <!-- Library - Modernizer -->
+        <script src="libraries/modernizr/modernizr.js"></script>
 
-    <!-- Library - Bootstrap v3.3.5 -->
-    <script src="libraries/bootstrap/bootstrap.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
-    <script src="libraries/bootstrap/bootstrap-datetimepicker.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+        <!-- Library - Bootstrap v3.3.5 -->
+        <script src="libraries/bootstrap/bootstrap.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+        <script src="libraries/bootstrap/bootstrap-datetimepicker.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
 
-    <!-- jQuery Easing v1.3 -->
-    <script src="js/jquery.easing.min.js"></script>
+        <!-- jQuery Easing v1.3 -->
+        <script src="js/jquery.easing.min.js"></script>
 
-    <!-- Library - jQuery.appear -->
-    <script src="libraries/appear/jquery.appear.js"></script>
+        <!-- Library - jQuery.appear -->
+        <script src="libraries/appear/jquery.appear.js"></script>
 
-    <!-- Library - OWL Carousel V.2.0 beta -->
-    <script src="libraries/owl-carousel/owl.carousel.min.js"></script>
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 
-    <!-- jQuery For Number Counter -->
-    <script src="libraries/number/jquery.animateNumber.min.js"></script>
+        <!-- Library - OWL Carousel V.2.0 beta -->
+        <script src="libraries/owl-carousel/owl.carousel.min.js"></script>
 
-    <!-- Library - FlexSlider v2.5.0 -->
-    <script defer src="libraries/flexslider/jquery.flexslider.js"></script>
+        <!-- jQuery For Number Counter -->
+        <script src="libraries/number/jquery.animateNumber.min.js"></script>
 
-    <!-- Library - Functions JS -->
-    <script src="js/functions.js"></script>
+        <!-- Library - Google Map API -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
-    <script>
+        <!-- Library - FlexSlider v2.5.0 -->
+        <script defer src="libraries/flexslider/jquery.flexslider.js"></script>
 
-
-        // Get the email from the form and the password.
-        $("#login_button").click((e) => {
-
-            e.preventDefault();
-            // Make a post request to the server.
-            // If the server responds with success, redirect to ""profile"""
-
-            console.log("Clicked")
-            $.ajax({
-                method: "POST",
-                url: "/api/signin",
-                data: {
-                    email: $("#Email").val(),
-                    password: $("#Pass").val()
-                }
-            }).then(res => {
-                console.log(res)
-                if (res.success) {
-                    console.log("Good to go")
-                    window.location.href = "http://localhost:8080/home.html"
-                }
-            })
-
-
-
-        })
-
-
-          // If the server responds with success, redirect to ""profile"""
-
-
-
-    </script>
+        <!-- Library - Functions JS -->
+        <script src="js/functions.js"></script>
+        <script src="./js/add.js" type="text/javascript"></script>
 
 </body>
 

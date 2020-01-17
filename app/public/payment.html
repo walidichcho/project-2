@@ -1,232 +1,371 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Payment</title>
-    <title>Simple Map</title>
-    <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>HostTrans - Hospital Special Company</title>
+
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/HostTrans Logo-fav.png" />
+
+    <!-- For iPhone 4 Retina display: -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images//apple-touch-icon-114x114-precomposed.png">
+
+    <!-- For iPad: -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images//apple-touch-icon-72x72-precomposed.png">
+
+    <!-- For iPhone: -->
+    <link rel="apple-touch-icon-precomposed" href="images//apple-touch-icon-57x57-precomposed.png">
+
+    <!-- Library - Loader CSS -->
+    <link rel="stylesheet" type="text/css" href="libraries/loader/loaders.min.css">
+
+    <!-- Library - Google Font Familys -->
+    <link
+        href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic'
+        rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <link
+        href='https://fonts.googleapis.com/css?family=Lato:400,100italic,100,300,300italic,400italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+
+    <!-- Library - Bootstrap v3.3.5 -->
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="libraries/bootstrap/bootstrap-datetimepicker.min.css">
+
+    <!-- Font Icons -->
+    <link rel="stylesheet" type="text/css" href="libraries/fonts/font-awesome.min.css">
+
+    <!-- Library - OWL Carousel V.2.0 beta -->
+    <link rel="stylesheet" type="text/css" href="libraries/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="libraries/owl-carousel/owl.theme.css">
+
+    <!-- Library - FlexSlider v2.5.0 -->
+    <link rel="stylesheet" type="text/css" href="libraries/flexslider/flexslider.css">
+
+    <!-- Library - Animate CSS -->
+    <link rel="stylesheet" type="text/css" href="libraries/animate/animate.min.css">
+
+    <!-- Custom - Common CSS -->
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/navigation-menu.css">
+
+    <!-- Custom - Theme CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/shortcodes.css">
+
+    <Style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            text-decoration: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/97/Boston_Sky.jpg");
+
+
+        }
+
+
+        .wrapper {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 350px;
+        }
+
+        .wrapper .checkout_wrapper .checkout_form {
+            width: 55%;
+            background: #fff;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            padding: 50px 30px;
+        }
+
+        .wrapper .checkout_wrapper .checkout_form p {
+            margin-bottom: 25px;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+
+        .wrapper .checkout_wrapper .checkout_form .section {
+            margin-bottom: 15px;
+        }
+
+
+        .wrapper .checkout_wrapper .checkout_form .section input[type="text"]:focus {
+            border-color: #e85c4d;
+        }
+
+        .wrapper .checkout_wrapper .checkout_form .section.last_section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .wrapper .checkout_wrapper .checkout_form .section.last_section .item {
+            width: 48%;
+        }
+
+
+        .wrapper .checkout_wrapper .checkout_form .btn {
+            background: #e85c4d;
+            padding: 10px;
+            border-radius: 25px;
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .wrapper .checkout_wrapper .checkout_form .btn a {
+            color: #fff;
+            letter-spacing: 5px;
+            display: block;
+        }
+
+        #message {
+            visibility: hidden;
+            width: 55%;
+            background: #fff;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+            padding: 50px 30px;
+            margin: 100px 100px;
+            margin-left: 300px;
+            text-align: center;
+            top: 50%;
+
+        }
+
+        body {
+            background-image: url("https://wallpaperaccess.com/full/429867.jpg");
+        }
+
+
+        #b1 {
+            display: none;
+
+            margin-left: 500px;
+            margin-right: 500px;
+            margin-top: -50px;
+        }
+    </Style>
 </head>
-<Style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        outline: none;
-        text-decoration: none;
-        font-family: Arial, Helvetica, sans-serif;
-    }
 
-    body {
-        background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/97/Boston_Sky.jpg");
+<body data-offset="200" data-spy="scroll" data-target=".ow-navigation">
 
-
-    }
-
-
-    .wrapper {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 500px;
-        height: 350px;
-    }
-
-    /* .wrapper .checkout_wrapper {
-        width: 100px;
-        height: 100px;
-        display: flex;
-    } */
-
-    /* .wrapper .checkout_wrapper .product_info {
-        width: 69%;
-        background-color: #e85c4d;
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        position: relative;
-
-    } */
-
-    /* .wrapper .checkout_wrapper .product_info img {
-        width: 240px;
-        margin-top: 30px;
-        margin-left: 5px;
-    } */
-    /* .wrapper .checkout_wrapper .product_info .content {
-        text-align: center;
-        margin-top: 25px;
-        color: #fff;
-        text-transform: uppercase;
-    } */
-
-    /* .wrapper .checkout_wrapper .product_info .content h3 {
-        font-size: 18px;
-        line-height: 18px;
-        letter-spacing: 3px;
-    } */
-
-    /* .wrapper .checkout_wrapper .product_info .content p {
-        font-size: 14px;
-        margin-top: 10px;
-    } */
-
-    .wrapper .checkout_wrapper .checkout_form {
-        width: 55%;
-        background: #fff;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-        padding: 50px 30px;
-    }
-
-    .wrapper .checkout_wrapper .checkout_form p {
-        margin-bottom: 25px;
-        font-size: 20px;
-        text-transform: uppercase;
-    }
-
-    .wrapper .checkout_wrapper .checkout_form .section {
-        margin-bottom: 15px;
-    }
-
-    /* .wrapper .checkout_wrapper .checkout_form .section input[type="text"] {
-        width: 100%;
-        padding: 10px;
-        border: 2px solid #dddddd;
-    } */
-
-    .wrapper .checkout_wrapper .checkout_form .section input[type="text"]:focus {
-        border-color: #e85c4d;
-    }
-
-    .wrapper .checkout_wrapper .checkout_form .section.last_section {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .wrapper .checkout_wrapper .checkout_form .section.last_section .item {
-        width: 48%;
-    }
-
-
-    .wrapper .checkout_wrapper .checkout_form .btn {
-        background: #e85c4d;
-        padding: 10px;
-        border-radius: 25px;
-        text-align: center;
-        margin-top: 25px;
-    }
-
-    .wrapper .checkout_wrapper .checkout_form .btn a {
-        color: #fff;
-        letter-spacing: 5px;
-        display: block;
-    }
-
-    #message {
-        visibility: hidden;
-        width: 55%;
-        background: #fff;
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-        padding: 50px 30px;
-        margin: 100px 100px;
-        margin-left: 300px;
-        text-align: center;
-        top: 50%;
-
-    }
-</Style>
-
-<body>
-
-
-    <div id="ride">
-        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-            <div class="container">
-                <a class="navbar-brand" href="home.html">Host<span>Trans</span></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                    aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="oi oi-menu"></span> Menu
-                </button>
-
-                <div class="collapse navbar-collapse" id="ftco-nav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="home.html" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="ride.html" class="nav-link">Ride</a></li>
-                        <li class="nav-item"><a href="safety.html" class="nav-link">Safety</a></li>
-                        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                        <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="wrapper">
-            <div class="checkout_wrapper">
-                <div class="product_info">
-                    <!-- <img ser="" alt="product_image"> -->
-                    <div class="content">
-                        <h3></h3>
-                        <p></p>
+    <a id="top"></a>
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header-main">
+            <!-- Top Header -->
+            <div class="top-header container-fluid no-padding">
+                <!-- Container -->
+                <div class="container">
+                    <div class="col-md-8 pull-right top-menu">
+                        <ul class="no-bottom-margin">
+                            <li><a href="signin.html">Sign In</a></li>
+                        </ul>
                     </div>
+                </div><!-- Container /- -->
+            </div><!-- Top Header /- -->
+
+            <nav class="navbar ow-navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <div class="navbar-brand" id="logo_navbar">
+                            <a href="#">
+                                <img src="./images/HostTrans Logo-80.png" alt="Logo" style="margin-top: -21px;" />
+                            </a>
+                        </div>
+                        <ul class="nav navbar-nav">
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="safety.html">Safety</a></li>
+                            <li><a href="faq.html">Faq</a></li>
+                            <li><a href="contact-us.html">Contact US</a></li>
+                        </ul>
+                    </div>
+                    <a href="booking.html">Book For A Ride</a>
                 </div>
-                <div class="checkout_form" id="checkform">
-                    <p>Payment Selection</p>
-                    <div class="details">
-                        <div class="section">
-                            <input type="text" placeholder="Card Number">
+            </nav>
+        </header><!-- Header /- -->
+
+
+
+
+        <div id="ride">
+
+            <div class="wrapper">
+                <div class="checkout_wrapper">
+                    <div class="product_info">
+                        <div class="content">
+                            <h3></h3>
+                            <p></p>
                         </div>
-                        <div class="section">
-                            <input type="text" placeholder="Cardholder Name">
-                        </div>
-                        <div class="section">
-                            <input type="text" placeholder="Expiration Date">
-                        </div>
-                        <div class="section last_section">
-                            <!-- <div class="item">
-                                <input type="text" placeholder="Card Number"><br>
-                            </div> -->
-                            <div class="item">
-                                <input type="text" placeholder="CVV">
+                    </div>
+                    <div class="checkout_form" id="checkform">
+                        <p>Payment Selection</p>
+                        <div class="details">
+                            <div class="section">
+                                <input type="text" placeholder="Card Number">
+                            </div>
+                            <div class="section">
+                                <input type="text" placeholder="Cardholder Name">
+                            </div>
+                            <div class="section">
+                                <input type="text" placeholder="Expiration Date">
+                            </div>
+                            <div class="section last_section">
+                                <div class="item">
+                                    <input type="text" placeholder="CVV">
+                                </div>
+                            </div>
+                            <div class="btn" id="myBtn">
+
+                                <a href="#">Pay</a>
                             </div>
                         </div>
-                        <div class="btn" id="myBtn">
-
-                            <a href="#">Pay</a>
-                        </div>
                     </div>
                 </div>
             </div>
+            <div id="message">
+                <h5 id="time001">20</h5>
+                <h3> The driver will be there soon.</h3>
+                <p>Thank you for your business</p>
+                <p> hope to see you again</p>
+            </div>
+            <a href="home.html" class="btn btn-warning" type="submit" id="b1">Close</a>
         </div>
-        <div id="message">
-            <h3> The driver will be there soon.</h3>
-            <p>Thank you for your business</p>
-            <p> hope to see you again</p>
+    </div>
+    <footer class="footer-main">
+        <!-- Container -->
+        <div class="container">
 
-
+            <div class="col-md-4 col-sm-6">
+                <aside class="widget widget-links">
+                    <h3 class="widget-title">We Glad To Offer</h3>
+                    <ul>
+                        <li><a href="#">24 / 7 Transport Service To the Partbers Hospitals</a></li>
+                        <li><a href="#">Instant Printed Bills In Car On Departure</a></li>
+                        <li><a href="#">Magazine And News Papers For Reading On Ride</a></li>
+                        <li><a href="#">Credit And Debit Card Payment Available</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <aside class="widget widget-about">
+                    <h3 class="widget-title">about Us</h3>
+                    <p>Since 2019, we’ve provided compassionate, safe and timely transport. With a large fleet of
+                        vehicles and a
+                        rigorously trained staff, we ensure reliable rides and can assist any passenger — no matter what
+                        disabilities, special needs or challenges they face. We take great pride in every element of our
+                        work to
+                        best assist those in need.</p>
+                    <ul>
+                        <li><img src="images/icon/ftr-location.png" alt="Address" />500 W Cummings Park - Suite 1850
+                            <span>Woburn, Ma - 01801</span></li>
+                        <li><img src="images/icon/ftr-customer.png" alt="Phone" /> Customer Support :
+                            <span>1800-RIDE-HostTrans</span></li>
+                        <li><img src="images/icon/ftr-email.png" alt="E-Mail" /><span>Email :</span><a
+                                href="mailto:rlima@atriumproductions.net"> mail@HostTrans.com</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <aside class="widget widget-logo">
+                    <img src="./images/HostTrans Logo.png" alt="Logo" />
+                </aside>
+            </div>
+        </div><!-- Container /- -->
+        <div class="bottom-footer container-fluid no-padding">
+            <div class="container">
+                <div class="col-md-7 pull-right">
+                    <p class="copyright">copyrights &copy; 2020 Rubinho, Naima, Pinar - HostTrans Special Tranport
+                        Services. All rights reserved</p>
+                </div>
+            </div>
         </div>
-        <script>
-            let PayButton = document.getElementById("myBtn")
-            PayButton.addEventListener("click", myFunction);
+    </footer>
+    <script>
 
-            function myFunction() {
-                $(document).ready(function () {
-                    document.getElementById("message").style.visibility = "visible";
+        let PayButton = document.getElementById("myBtn")
+        PayButton.addEventListener("click", myFunction);
+        function myFunction() {
+            $(document).ready(function () {
+                document.getElementById("message").style.visibility = "visible";
+                document.getElementById('b1').style.display = "block";
+                $("#checkform").hide();
+            });
+        }
+        function showButtons() {
+            $(document).ready(function () {
+                document.getElementById('b1').style.display = "";
+            });
 
-
-                    $("#checkform").hide();
-
-                });
-
+        }
+        var c = 20;
+        myCounter = setInterval(function () {
+            c = c - 1;
+            if (c < 20) {
+                time001.innerHTML = "Time: " + c;
             }
-        </script>
+            if (c < 1) {
+                window.clearInterval(myCounter);
+            }
+        }, 1000); 
+    </script>
+    </div><!-- Main Container -->
+    <!-- JQuery v1.11.3 -->
+    <script src="js/jquery.min.js"></script>
+
+    <!-- Library - Modernizer -->
+    <script src="libraries/modernizr/modernizr.js"></script>
+
+    <!-- Library - Bootstrap v3.3.5 -->
+    <script src="libraries/bootstrap/bootstrap.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+    <script src="libraries/bootstrap/bootstrap-datetimepicker.min.js"></script><!-- Bootstrap JS File v3.3.5 -->
+
+    <!-- jQuery Easing v1.3 -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Library - jQuery.appear -->
+    <script src="libraries/appear/jquery.appear.js"></script>
+
+    <!-- Library - OWL Carousel V.2.0 beta -->
+    <script src="libraries/owl-carousel/owl.carousel.min.js"></script>
+
+    <!-- jQuery For Number Counter -->
+    <script src="libraries/number/jquery.animateNumber.min.js"></script>
+
+    <!-- Library - FlexSlider v2.5.0 -->
+    <script defer src="libraries/flexslider/jquery.flexslider.js"></script>
+
+    <!-- Library - Functions JS -->
+    <script src="js/functions.js"></script>
 
 </body>
 
