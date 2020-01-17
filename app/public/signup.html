@@ -116,13 +116,17 @@
             console.log("Clicked")
             $.ajax({
                 method: "POST",
-                url: "/api/user/new",
+                url: "/api/signup",
                 data: {
                     email: $("#email").val(),
                     password: $("#pass").val()
                 }
             }).then(res => {
                 console.log(res)
+                if (res.success) {
+                    console.log("Good to go")
+                    window.location.href = "http://localhost:8080/home.html"
+                }
             })
         })
 

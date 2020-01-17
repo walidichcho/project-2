@@ -37,9 +37,6 @@ module.exports = function (app) {
         });
         res.status(204).end();
     });
-    app.get("/justin", (req, res) => {
-        res.json({ success: "true" })
-    })
 
     app.post("/api/user/new", (req, res) => {
         db.User.create({ email: req.body.email, password: req.body.password }).then(r => {
@@ -48,7 +45,6 @@ module.exports = function (app) {
             console.log(err)
             res.json({ succes: false })
         })
-
     })
 };
 

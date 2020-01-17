@@ -19,9 +19,8 @@ module.exports = function (app) {
     });
 
 
-    app.get("/ride", function (req, res) {
-        res.sendFile(path.join(__dirname, "../app/public/ride.html"));
-
+    app.get("/pricing", function (req, res) {
+        res.sendFile(path.join(__dirname, "../app/public/pricing.html"));
     });
     // add route loads the add.html page,
     // where users can enter new characters to the db
@@ -39,7 +38,7 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../app/public/pricing.html"));
     });
 
-    app.get("/", function (req, res) {
+    app.get("/signup", function (req, res) {
         // If the user already has an account send them to the home page
         if (req.user) {
             res.redirect("/home");

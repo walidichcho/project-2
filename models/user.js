@@ -5,7 +5,7 @@ var bcrypt = require("bcryptjs");
 // Creating our User model
 //Set it as export because we will need it required on the server
 module.exports = function (sequelize, DataTypes) {
-    return User = sequelize.define("User", {
+    let User = sequelize.define("User", {
         // The email cannot be null, and must be a proper email before creation
         email: {
             type: DataTypes.STRING,
@@ -24,18 +24,13 @@ module.exports = function (sequelize, DataTypes) {
         hooks: {
             beforeCreate: function (user) {
                 user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
-            },
-            afterValidate: function (user) {
-                user.username = 'Toni'
             }
         }
-    },
-        {
-            instanceMethods: {
-                validPassword: function (password) {
-                    return bcrypt.compareSync(password, this.password);
-                }
-            }
-        });
-};
+    });
 
+    User.prototype.validPassword = function (password) {
+        return bcrypt.compareSync(password, this.password);
+    };
+
+    return User;
+}

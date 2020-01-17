@@ -27,6 +27,7 @@ require("./routes/api-routes.js")(app);
 
 // Here we introduce HTML routing to serve different HTML files
 require("./routes/html-routes.js")(app);
+require("./routes/auth_routes.js")(app);
 
 app.get("/health", (req, res) => {
     res.json({ success: true })
