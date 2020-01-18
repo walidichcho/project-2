@@ -65,8 +65,8 @@
 
     <Style>
         * {
-            margin: 0;
-            padding: 0;
+            margin: 0px;
+            padding: 0px;
             box-sizing: border-box;
             outline: none;
             text-decoration: none;
@@ -95,6 +95,7 @@
             border-top-right-radius: 30px;
             border-bottom-right-radius: 30px;
             padding: 50px 30px;
+            margin-top: 60px;
         }
 
         .wrapper .checkout_wrapper .checkout_form p {
@@ -146,7 +147,7 @@
             margin: 100px 100px;
             margin-left: 300px;
             text-align: center;
-            top: 50%;
+            top: 30%;
 
         }
 
@@ -161,6 +162,10 @@
             margin-left: 500px;
             margin-right: 500px;
             margin-top: -50px;
+        }
+
+        .footer-main {
+            margin-top: 200px;
         }
     </Style>
 </head>
@@ -253,10 +258,10 @@
                 </div>
             </div>
             <div id="message">
-                <h5 id="time001">20</h5>
+                <!-- <h5 id="time001">20</h5> -->
                 <h3> The driver will be there soon.</h3>
-                <p>Thank you for your business</p>
-                <p> hope to see you again</p>
+                <h4>Thank you for your business</h4>
+                <h5> Hope to see you again</h5>
             </div>
             <a href="home.html" class="btn btn-warning" type="submit" id="b1">Close</a>
         </div>
@@ -327,16 +332,16 @@
             });
 
         }
-        var c = 20;
-        myCounter = setInterval(function () {
-            c = c - 1;
-            if (c < 20) {
-                time001.innerHTML = "Time: " + c;
-            }
-            if (c < 1) {
-                window.clearInterval(myCounter);
-            }
-        }, 1000); 
+        // var c = 20;
+        // myCounter = setInterval(function () {
+        //     c = c - 1;
+        //     if (c < 20) {
+        //         time001.innerHTML = "Time: " + c;
+        //     }
+        //     if (c < 1) {
+        //         window.clearInterval(myCounter);
+        //     }
+        // }, 1000); 
     </script>
     </div><!-- Main Container -->
     <!-- JQuery v1.11.3 -->
