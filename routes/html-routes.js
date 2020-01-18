@@ -23,6 +23,10 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../app/public/payment.html"));
     });
 
+    app.get("/home", function (req, res) {
+        res.sendFile(path.join(__dirname, "../app/public/home.html"));
+    });
+
     app.get("/booking", function (req, res) {
         res.sendFile(path.join(__dirname, "../app/public/booking.html"));
     });
