@@ -79,8 +79,12 @@
 
 .section-header {
 	text-align: center;
-	margin-left: 35%;
+	
 }
+
+/* #faq_banner {
+	margin-left: 35%;
+} */
 
 .photos-slider .carousel-caption {
 	bottom: 35%;
