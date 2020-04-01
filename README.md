@@ -23,7 +23,7 @@ This app requires a number of programs:
 
 ## Deployment
 
-This application is delployed at 
+This application is delployed at https://project-2-hosttrans.herokuapp.com/home.html 
 
 ## Author
 
